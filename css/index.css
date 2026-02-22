@@ -1,28 +1,40 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
-:root{
+:root {
+    /* BC Maroon: 메인 버튼 및 강조색 */
+    --btn-bg: #8A100E; 
+    /* 버튼 텍스트 색상: 금색 혹은 흰색 */
+    --btn-color: #fdfdfd; 
 
-    --btn-color: #fdfdfd;/* button color*/
-    --btn-bg: #155eef;/* button bg color*/
+    /* BC Gold: 링크 호버 및 포인트 색상 */
+    --primary-text-color: #8A100E;
+    --link-hover: #BC9B6A;
+    --input-hover-bd-color: #8A100E;
 
-    --primary-text-color: #155eef;
-    --link-hover: #155eef;
-    --input-hover-bd-color: #155eef;
+    /* 배경색 정의: 부드러운 미색(Cream) 느낌 */
+    --bg-main: #FDFDFD;
+    --bg-sidebar: #8A100E; /* 사이드바를 Maroon으로 강조 */
 }
-
 
 html {
     scroll-behavior: smooth;
     font-family: "Roboto", sans-serif;
 }
 
-header{
-    /* background-color: #fff;
-    color: #000; */
+body {
+    background-color: var(--bg-main);
 }
 
-
-
-.primary-text-color{
+/* 텍스트 강조색 */
+.primary-text-color {
     color: var(--primary-text-color);
+}
+
+/* 추가 포인트: BC Gold 색상의 테두리나 강조가 필요할 때 사용 */
+.bc-gold-text {
+    color: #BC9B6A;
+}
+
+.bc-maroon-bg {
+    background-color: #8A100E;
 }

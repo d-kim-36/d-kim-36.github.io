@@ -3,31 +3,24 @@
 @tailwind utilities;
 
 
+/* tailwind.css 수정 */
 @layer base {
-    
-    html[data-theme='primary'] {
-      --color-primary: #155eef;
-      --color-secondary: #c8cbf984;
-
-      --color-btn-text: #fff;
-    }
-  
-    html[data-theme='warning'] {
-        --color-primary: #ffc934;
-        --color-secondary: #c8cbf984;
-        
-      --color-btn-text: #000;
+    :root {
+        --color-primary: #8A100E;   /* Maroon 메인 */
+        --color-secondary: #BC9B6A; /* Gold 포인트 */
+        --color-btn-text: #ffffff;
+        --bg-main: #FDFDFD;         
+        --input-hover-bd-color: #8A100E;
     }
 
-    html[data-theme='success'] {
-        --color-primary: #0aab1f;
-        --color-secondary: #c8cbf984;
-        
-        --color-btn-text: #fff;
-
+    .tw-dark {
+        --color-primary: #BC9B6A;   /* 다크모드: Gold 배경 */
+        --color-secondary: #8A100E; /* Maroon 포인트 */
+        --color-btn-text: #1A1A1A;  
+        --bg-main: #0F172A;         
+        --input-hover-bd-color: #BC9B6A;
     }
 }
-
 
 @layer components{
 
