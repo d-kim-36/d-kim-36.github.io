@@ -27,7 +27,7 @@ jobs:
         run: npm ci
 
       - name: Build Tailwind
-        run: npx tailwindcss -i ./css/tailwind.css -o ./css/tailwind-runtime.css --minify
+        run: npm run build:tailwind
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
