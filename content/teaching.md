@@ -1,6 +1,7 @@
 ---
 title: "Teaching"
 layout: "single"
+
 ---
 
 # Teaching and Course Development

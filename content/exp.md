@@ -1,6 +1,7 @@
 ---
 title: "Experience"
 layout: "single"
+showToc: true
 ---
 
 # Professional Credentials
@@ -9,7 +10,7 @@ layout: "single"
 
 ## Employment History
 
-### [Boston College](https://www.bc.edu/)
+### Boston College — [Homepage](https://www.bc.edu/)
 **2021 – Current** | Professor, Teaching, Curriculum, and Society
 Lynch School of Education and Human Development.
 
@@ -19,15 +20,15 @@ Formative Education Department, Lynch School of Education and Human Development.
 **2016 – 2021** | Associate Professor, Teaching, Curriculum, and Society
 Lynch School of Education and Human Development.
 
-### [Harvard University](https://www.harvard.edu/)
+### Harvard University — [Homepage](https://www.harvard.edu/)
 **2022 – 2023** | Visiting Scholar
 Project Zero, Harvard Graduate School of Education. Hosted by Drs. Howard Gardner and Wendy Fisher.
 
-### [Seoul National University](https://en.snu.ac.kr/)
+### Seoul National University — [Homepage](https://en.snu.ac.kr/)
 **Fall 2022** | Visiting Professor
 English Education Department, College of Education, Seoul, South Korea.
 
-### [University of South Florida](https://www.usf.edu/)
+### University of South Florida — [Homepage](https://www.usf.edu/)
 **2015 – 2016** | Core Faculty Member
 Teacher Education Doctoral Program, College of Education.
 
@@ -43,15 +44,15 @@ Second Language Acquisition/Instructional Technology Interdisciplinary Doctoral 
 **2006 – 2012** | Assistant Professor
 Foreign Language Education/ESOL/SLA/IT, Secondary Education Department.
 
-### [University of Pennsylvania](https://www.upenn.edu/)
+### University of Pennsylvania — [Homepage](https://www.upenn.edu/)
 **2014 Spring** | Visiting Scholar
 Graduate School of Education.
 
-### [University of Cambridge](https://www.cam.ac.uk/)
+### University of Cambridge — [Homepage](https://www.cam.ac.uk/)
 **2013 Fall** | Visiting Scholar
 Faculty of Education, United Kingdom. Hosted by Drs. Michael Evans and Linda Fisher.
 
-### [University of New Mexico](https://www.unm.edu/)
+### University of New Mexico — [Homepage](https://www.unm.edu/)
 **2005 – 2006** | Postdoctoral Fellow
 Language, Literacy, and Sociocultural Studies, College of Education.
 

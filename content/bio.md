@@ -1,6 +1,7 @@
 ---
 title: "Biography"
 layout: "single"
+showToc: false
 ---
 
 

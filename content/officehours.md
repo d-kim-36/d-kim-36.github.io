@@ -2,6 +2,7 @@
 title: "Office Hours"
 date: 2026-02-23
 hidemeta: true
+showToc: false
 description: "Office hours and appointment scheduling for Deoksoon Kim, Ph.D. at Boston College."
 ---
 

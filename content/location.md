@@ -2,6 +2,7 @@
 title: "Location"
 date: 2026-02-23
 hidemeta: true
+showToc: false
 description: "Mailing and office addresses for Deoksoon Kim, Ph.D. at the Lynch School of Education and Human Development."
 ---
 
