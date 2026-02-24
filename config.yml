@@ -24,8 +24,8 @@ menu:
         - name: Research
           url: res/
           weight: 40
-        - name: Courses
-          url: courses/
+        - name: Teaching
+          url: teaching/
           weight: 50
         - name: TEL
           url: https://www.bc.edu/bc-web/schools/lynch-school/sites/labs/transformative-education-lab.html
@@ -66,8 +66,8 @@ params:
               url: exp/
             - name: Research
               url: res/
-            - name: Courses
-              url: courses/
+            - name: Teaching
+              url: teaching/
             - name: Transformative Education Lab (TEL)
               url: https://www.bc.edu/bc-web/schools/lynch-school/sites/labs/transformative-education-lab.html
 
