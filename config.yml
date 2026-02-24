@@ -43,7 +43,7 @@ params:
     ShowBreadCrumbs: false
     ShowAllPagesInArchive: false
     MainSections: ["biography", "publications", "experience"]
-    ShowToc: false
+    ShowToc: true
     disableScrollToTop: true
     TocOpen: true
     ShowWordCount: false
@@ -95,14 +95,25 @@ params:
       icon: "favicon-16x16.png"
       iconHeight: 36
 
+# markup:
+#     goldmark:
+#         renderer:
+#             unsafe: true
+#     highlight:
+#         guessSyntax: true
+#         style: autumn 
+#     tableOfContents:
+#         endLevel: 2
+#         ordered: false
+#         startLevel: 2
 markup:
-    goldmark:
-        renderer:
-            unsafe: true
+  goldmark:
+    renderer:
+      unsafe: true # Allows HTML if needed
     highlight:
         guessSyntax: true
         style: autumn 
-    tableOfContents:
-        endLevel: 2
-        ordered: false
-        startLevel: 2
+  tableOfContents:
+    endLevel: 3 # Ensures ### headings are included
+    ordered: false
+    startLevel: 2 # Starts the list from ## headings

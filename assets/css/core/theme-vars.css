@@ -53,3 +53,15 @@
 }
 
 
+/* Custom Navy Link Color for better contrast */
+.post-content a {
+    color: #000080 !important; /* Navy Blue */
+    text-decoration: none;
+    font-weight: 500;
+    box-shadow: 0 1px 0 #000080; /* Subtle underline */
+}
+
+.post-content a:hover {
+    color: #0000cd !important; /* Medium Blue on hover */
+    box-shadow: 0 2px 0 #0000cd;
+}

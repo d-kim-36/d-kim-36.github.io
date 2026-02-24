@@ -1,4 +1,7 @@
-# dependencies
+# Hugo build artifacts
+public/
+resources/
+.hugo_build.lock# dependencies
 node_modules/
 
 # logs
@@ -19,8 +22,3 @@ yarn-error.log*
 
 # optional: if you ever generate dist folder
 dist/
-
-# Hugo build artifacts
-public/
-resources/
-.hugo_build.lock
