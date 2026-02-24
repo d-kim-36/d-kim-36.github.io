@@ -11,6 +11,7 @@
     padding: var(--gap);
 }
 
+
 .profile .profile_inner {
     display: flex;
     flex-direction: column;

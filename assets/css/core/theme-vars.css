@@ -8,16 +8,18 @@
     --radius: 8px;
     --theme: rgb(255, 255, 255);
     --entry: rgb(255, 255, 255);
-    --primary: rgb(30, 30, 30);
-    --secondary: rgb(108, 108, 108);
+    /* --primary: rgb(30, 30, 30); */
+    --primary: rgb(105, 8, 7);
+    /* --secondary: rgb(108, 108, 108); */
+    --secondary: rgb(185, 145, 84);
     --tertiary: rgb(214, 214, 214);
     --gray: rgb(165, 165, 165);
-    --content: rgb(30, 30, 30);
+    --content: rgb(31, 41, 55);
     --code-block-bg: rgb(28, 29, 33);
     --code-bg: rgb(245, 245, 245);
     --border: rgb(238, 238, 238);
     --darkcolor: #6a7ba2;
-    --lightcolor: #cbd1de;
+    --lightcolor: #cbd1ded5;
     --semibold: 500;
     --homesize: 16px;
     --textsize: 18px;
@@ -49,3 +51,5 @@
 .dark.list {
     background: var(--theme);
 }
+
+

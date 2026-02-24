@@ -1,5 +1,5 @@
 baseURL: "https://pascalmichaillat.org/hugo-website/" 
-title: Moritz-Maria von Igelfeld
+title: Deoksoon Kim
 theme: PaperMod
 
 enableInlineShortcodes: true
@@ -12,39 +12,37 @@ taxonomies:
 
 menu:
     main:
-        - name: Books
-          url: books/
-          weight: 5 
-        - name: Papers
-          url: papers/
-          weight: 2
+        - name: Biography
+          url: bio/
+          weight: 10
+        - name: Publications
+          url: pubs/
+          weight: 20
+        - name: Experience
+          url: exp/
+          weight: 30
+        - name: Research
+          url: res/
+          weight: 40
         - name: Courses
           url: courses/
-          weight: 3
-        - name: Data
-          url: data/
-          weight: 4 
-        - name: Blog
-          url: https://en.wikipedia.org/wiki/Moritz-Maria_von_Igelfeld_(character)
-          weight: 6
+          weight: 50
+        - name: TEL
+          url: https://www.bc.edu/bc-web/schools/lynch-school/sites/labs/transformative-education-lab.html
+          weight: 60
 
 params:
-    description: "This website hosts Moritz-Maria von Igelfeld's research papers, books, course materials, data, curriculum vitae, and contact information."
-    author: Moritz-Maria von Igelfeld
-    # googleAnalyticsID: "G-XXXXX"
+    description: "Research publications, academic experience, and professional biography of Deoksoon Kim, Ph.D., Professor at Boston College."
+    author: Deoksoon Kim, Ph.D.
     DateFormat: "January 2006"
     defaultTheme: light
     hideFooter: false
-    disableThemeToggle: true
-    ShowShareButtons: false
-    ShowReadingTime: false
-    disableSpecial1stPost: true
+    disableThemeToggle: false
     disableAnchoredHeadings: true
     ShowPostNavLinks: false
     ShowBreadCrumbs: false
-    ShowCodeCopyButtons: true
     ShowAllPagesInArchive: false
-    MainSections: ["books","courses","papers","data"]
+    MainSections: ["biography", "publications", "experience"]
     ShowToc: false
     disableScrollToTop: true
     TocOpen: true
@@ -54,50 +52,38 @@ params:
     math: true
     profileMode:
           enabled: true
-          title: Professor Dr von Igelfeld
-          subtitle: "I am a Professor in the Institute of Romance Philology at the University of Regensburg, Germany. My research focuses on Portuguese irregular verbs. I was a doctoral student of Professor Dr Dieter Vogelsang in Munich, and later a second assistant of Professor Walter Schoeffler-Henschell at the University of Wiesbaden."
-          imageUrl: "picture.jpeg"
-          imageWidth: 160
-          imageHeight: 160
+          title: Deoksoon Kim, Ph.D.
+          subtitle: "Professor at the Lynch School of Education and Human Development, Boston College. My research focuses on understanding the needs of immigrant students to facilitate English acquisition and academic success through instructional technology."
+          imageUrl: "avatar.jpg"
+          imageWidth: 120
+          imageHeight: 120
           buttons:
-            - name: Papers
-              url: papers/
-            - name: Data
-              url: data/
-            - name: Books
-              url: books/
+            - name: Biography
+              url: bio/
+            - name: Publications
+              url: pubs/
+            - name: Experience
+              url: exp/
+            - name: Research
+              url: res/
             - name: Courses
               url: courses/
-            - name: Tags
-              url: tags/
-            - name: Archive
-              url: archive/
-            - name: Blog
-              url: https://en.wikipedia.org/wiki/Moritz-Maria_von_Igelfeld_(character)
+            - name: Transformative Education Lab (TEL)
+              url: https://www.bc.edu/bc-web/schools/lynch-school/sites/labs/transformative-education-lab.html
 
     socialIcons:
-        - name: CV
-          url: cv.pdf
-        - name: Email
-          url: mailto:igelfeld@regensburg.edu
-        - name: Zoom
-          url: https://www.zoom.us/my/igelfeld
         - name: Location
           url: location/
         - name: Office Hours
           url: officehours/
         - name: Google Scholar
-          url: https://scholar.google.com/citations?user=cL23w-4AAAAJ
-        - name: GitHub
-          url: https://github.com/pmichaillat
-        - name: Substack
-          url: https://pmichaillat.substack.com
+          url: https://scholar.google.com/citations?hl=en&user=YvCec_sAAAAJ
         - name: YouTube
-          url: https://www.youtube.com/@pmichaillat
-        - name: Twitter
-          url: https://x.com/pmichaillat
-        - name: Bluesky
-          url: https://bsky.app/profile/pmichaillat.bsky.social
+          url: https://www.youtube.com/@TLABTogether
+        - name: Email
+          url: https://www.bc.edu/content/bc-web/schools/lynch-school/sites/labs/transformative-education-lab/media-library/newsletter-archive.html
+        # - name: Bluesky
+        #   url: https://bsky.app/profile/pmichaillat.bsky.social
 
     assets:
         disableScrollBarStyle: true
@@ -105,9 +91,9 @@ params:
         hiddenInList: false
         hiddenInSingle: true
     label:
-      text: "Moritz-Maria von Igelfeld"
-      icon: favicon.ico
-      iconHeight: 18
+      text: "Deoksoon Kim"
+      icon: "favicon-16x16.png"
+      iconHeight: 36
 
 markup:
     goldmark:

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Deoksoon Kim</title>
+    <link>http://localhost:1313/hugo-website/</link>
+    <description>Recent content on Deoksoon Kim</description>
+    <generator>Hugo -- 0.156.0</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 23 Feb 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/hugo-website/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Location</title>
+      <link>http://localhost:1313/hugo-website/location/</link>
+      <pubDate>Mon, 23 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/hugo-website/location/</guid>
+      <description>Mailing and office addresses for Deoksoon Kim, Ph.D. at the Lynch School of Education and Human Development.</description>
+    </item>
+    <item>
+      <title>Office Hours</title>
+      <link>http://localhost:1313/hugo-website/officehours/</link>
+      <pubDate>Mon, 23 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/hugo-website/officehours/</guid>
+      <description>Office hours and appointment scheduling for Deoksoon Kim, Ph.D. at Boston College.</description>
+    </item>
+    <item>
+      <title>List of Irregular Verbs Across Romance Languages</title>
+      <link>http://localhost:1313/hugo-website/exp/data1/</link>
+      <pubDate>Thu, 07 Mar 2013 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/hugo-website/exp/data1/</guid>
+      <description>This dataset contains all irregular verbs in known Romance languages.</description>
+    </item>
+    <item>
+      <title>Lectures at the Villa of Reduced Circumstances</title>
+      <link>http://localhost:1313/hugo-website/courses/course1/</link>
+      <pubDate>Mon, 10 Mar 2003 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/hugo-website/courses/course1/</guid>
+      <description>This graduate course presents classical results in Romance philology.</description>
+    </item>
+    <item>
+      <title>Portugese Irregular Verbs</title>
+      <link>http://localhost:1313/hugo-website/res/book1/</link>
+      <pubDate>Wed, 01 Jan 1997 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/hugo-website/res/book1/</guid>
+      <description>This book discusses Portugese irregular verbs in great details.</description>
+    </item>
+    <item>
+      <title>Profanity in Early Irish</title>
+      <link>http://localhost:1313/hugo-website/courses/course2/</link>
+      <pubDate>Sat, 16 Jun 1990 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/hugo-website/courses/course2/</guid>
+      <description>This undergraduate course discusses profanity in Early Irish.</description>
+    </item>
+    <item>
+      <title>Biography</title>
+      <link>http://localhost:1313/hugo-website/bio/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/hugo-website/bio/</guid>
+      <description>&lt;p&gt;My research focuses on understanding the needs of immigrant students to facilitate English language acquisition and academic success within the K-12 system. I investigate how instructional technology can be leveraged to enhance learning experiences in STEM and language arts, with a specific emphasis on multimodal digital storytelling.&lt;/p&gt;
+&lt;p&gt;Throughout my academic career, I have explored the intersections of gender and immigration, formative education, and the development of professional identities for teachers. My work often bridges the gap between cognitive and sociocultural insights to create more equitable educational environments.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Publications</title>
+      <link>http://localhost:1313/hugo-website/pubs/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/hugo-website/pubs/</guid>
+      <description>&lt;h3 id=&#34;recent-research-20242025&#34;&gt;Recent Research (2024–2025)&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;2025&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Kim, D.&lt;/strong&gt;, Wang, C. K., Borowiec, K., Rein, N., Cho, J. H. A., &amp;amp; Liu, J. J. (2025). Unlocking the future: A comprehensive review of ChatGPT in education. &lt;em&gt;Technology, Knowledge and Learning&lt;/em&gt;, 1-53.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Kim, D.&lt;/strong&gt;, &amp;amp; Borowiec, K. (2025). Remote teaching and digital storytelling during COVID-19 as catalysts for teachers’ holistic development. &lt;em&gt;International Studies in Catholic Education&lt;/em&gt;, 1-25.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Kim, D.&lt;/strong&gt;, Kang, Y., &amp;amp; Borowiec, K. (2025). Unveiling identities: exploring emotional self-expression and bilingualism through digital storytelling in teacher education. &lt;em&gt;Asia Pacific Education Review&lt;/em&gt;, 1-16.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

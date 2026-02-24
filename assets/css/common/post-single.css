@@ -1,12 +1,17 @@
 .page-header,
 .post-header {
-    margin: 24px auto var(--content-gap) auto;
+    margin: 40px auto var(--content-gap) auto; /* Increased top margin for "Sleek" look */
 }
 
 .post-title {
-    margin-bottom: 20px;
-    font-size: 36px;
+    /* margin-bottom: 20px;
+    font-size: 36px; */
+    margin-bottom: 24px;
+    font-size: 40px; /* Increased from 36px */
+    font-weight: 600; /* Added bold weight */
+    letter-spacing: -0.03em;
 }
+
 
 .post-description {
     margin-top: 10px;
@@ -16,7 +21,9 @@
 .post-meta,
 .breadcrumbs {
     color: var(--secondary);
-    font-size: 15px;
+    font-size: 22px; /* Increased from 15px for readability */
+    font-weight: 500;
+    margin-top: 8px;
 }
 
 .post-meta .i18n_list li {

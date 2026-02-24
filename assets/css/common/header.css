@@ -6,6 +6,8 @@
     margin-inline-end: auto;
     line-height: var(--header-height);
     background: var(--code-bg);
+    position: relative; /* Ensure it stays above profile content */
+    z-index: 100;
 }
 
 .nav a {
@@ -25,6 +27,7 @@
 .logo a {
     font-size: var(--headersize);
     font-weight: var(--semibold);
+    letter-spacing: -0.02em; /* This gives it a tighter, more modern look */
 }
 
 .logo a img, .logo a svg {
@@ -36,11 +39,24 @@
     margin-inline-end: 8px;
 }
 
-button#theme-toggle {
+/* button#theme-toggle {
     font-size: 20px;
     margin: auto 4px;
+} */
+
+button#theme-toggle {
+    display: flex !important; /* Force visibility on home page */
+    font-size: 20px;
+    margin: auto 4px;
+    cursor: pointer;
+    visibility: visible !important;
+    opacity: 1 !important;
 }
 
+/* Specific fix for PaperMod Profile Mode hiding the header */
+.profile-mode .header {
+    display: block !important;
+}
 body.dark #moon {
     vertical-align: middle;
     display: none;
