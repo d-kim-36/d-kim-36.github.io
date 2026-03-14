@@ -27,7 +27,7 @@ menu:
         - name: Teaching
           url: teaching/
           weight: 50
-        - name: TEL
+        - name: TLab
           url: https://www.bc.edu/bc-web/schools/lynch-school/sites/labs/transformative-education-lab.html
           weight: 60
 
