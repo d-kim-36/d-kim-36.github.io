@@ -55,8 +55,8 @@ params:
           title: Deoksoon Kim, Ph.D.
           subtitle: "Professor at the Lynch School of Education and Human Development, Boston College. My research focuses on understanding the needs of immigrant students to facilitate English acquisition and academic success through instructional technology."
           imageUrl: "avatar.jpg"
-          imageWidth: 120
-          imageHeight: 120
+          imageWidth: 180
+          imageHeight: 180
           buttons:
             - name: Biography
               url: bio/
@@ -68,7 +68,7 @@ params:
               url: res/
             - name: Teaching
               url: teaching/
-            - name: Transformative Education Lab (TEL)
+            - name: Transformative Education Lab (TLab)
               url: https://www.bc.edu/bc-web/schools/lynch-school/sites/labs/transformative-education-lab.html
 
     socialIcons:
@@ -93,7 +93,7 @@ params:
     label:
       text: "Deoksoon Kim"
       icon: "favicon-16x16.png"
-      iconHeight: 36
+      iconHeight: 64
 
 # markup:
 #     goldmark:
