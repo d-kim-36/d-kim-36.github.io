@@ -2,10 +2,6 @@
 title: "Instructional Technology & Teacher Education"
 description: "Exploring the integration of digital tools and virtual environments in language learning and teacher preparation. This research focuses on how Web 2.0, virtual worlds, and digital literacy shape modern pedagogy."
 summary: "Investigating the intersection of technology and education to enhance teacher professional development and second language acquisition through innovative digital practices."
-cover:
-    image: "cover.jpg"
-    alt: "Abstract network of connections in navy blue"
-    relative: true
 showToc: true
 disableAnchoredHeadings: false
 ---

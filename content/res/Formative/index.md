@@ -2,10 +2,6 @@
 title: "Formative Education"
 description: "Examining educational practices that cultivate wholeness, purpose, and community. This research focuses on whole-person development in both virtual and traditional learning environments."
 summary: "Investigating how educational systems and digital tools can support the moral, social, and emotional growth of students and faculty."
-cover:
-    image: "cover.jpg"
-    alt: "Abstract network of connections in navy blue"
-    relative: true
 showToc: true
 disableAnchoredHeadings: false
 ---

@@ -2,10 +2,6 @@
 title: "L2 Reading and Literacy"
 description: "Investigating the cognitive, social, and cultural dimensions of second language reading. This research examines how learners construct meaning, utilize strategies, and develop identity through diverse literacy practices."
 summary: "Exploring the complexities of L2 literacy development, from individual reading strategies to the sociocultural influences that shape language learning in the classroom."
-cover:
-    image: "cover.jpg"
-    alt: "Abstract network of connections in navy blue"
-    relative: true
 showToc: true
 disableAnchoredHeadings: false
 ---

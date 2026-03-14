@@ -2,10 +2,6 @@
 title: "STEM Education for Language Learners"
 description: "Bridging science content and language development through culturally relevant pedagogy and invention-based learning. This research focuses on empowering emergent bilinguals in middle school STEM environments."
 summary: "Examining how project-based curricula, translanguaging, and explicit writing instruction support the scientific and linguistic growth of diverse learners."
-cover:
-    image: "cover.jpg"
-    alt: "Abstract network of connections in navy blue"
-    relative: true
 showToc: true
 disableAnchoredHeadings: false
 ---

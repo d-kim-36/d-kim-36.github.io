@@ -2,10 +2,6 @@
 title: "AI and Multimodality"
 description: "Exploring the intersection of artificial intelligence and multimodal communication to enhance language learning and digital literacy. This research examines how digital tools like VR and AI facilitate identity development and reflective practices."
 summary: "This research area investigates the transformative potential of AI and multimodal tools in fostering equitable and holistic educational experiences for diverse learners."
-cover:
-    image: "cover.jpg"
-    alt: ""
-    relative: true
 showToc: true
 disableAnchoredHeadings: false
 ---
