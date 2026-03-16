@@ -92,8 +92,9 @@ params:
         hiddenInSingle: true
     label:
       text: "Deoksoon Kim"
-      icon: "favicon-16x16.png"
-      iconHeight: 64
+      # icon: "favicon-16x16.png"
+      icon: "favicon.png"
+      iconHeight: 32
 
 # markup:
 #     goldmark:
