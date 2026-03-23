@@ -27,9 +27,12 @@ menu:
         - name: Teaching
           url: teaching/
           weight: 50
+        - name: Media
+          url: media/
+          weight: 60
         - name: TLab
           url: https://www.bc.edu/bc-web/schools/lynch-school/sites/labs/transformative-education-lab.html
-          weight: 60
+          weight: 70
 
 params:
     description: "Research publications, academic experience, and professional biography of Deoksoon Kim, Ph.D., Professor at Boston College."
@@ -68,6 +71,8 @@ params:
               url: res/
             - name: Teaching
               url: teaching/
+            - name: Media
+              url: media/
             - name: Transformative Education Lab (TLab)
               url: https://www.bc.edu/bc-web/schools/lynch-school/sites/labs/transformative-education-lab.html
 
