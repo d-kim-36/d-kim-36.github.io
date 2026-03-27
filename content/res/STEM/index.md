@@ -2,6 +2,7 @@
 title: "STEM Education for Language Learners"
 description: "Bridging science content and language development through culturally relevant pedagogy and invention-based learning. This research focuses on empowering emergent bilinguals in middle school STEM environments."
 summary: "Examining how project-based curricula, translanguaging, and explicit writing instruction support the scientific and linguistic growth of diverse learners."
+author: ["Deoksoon Kim, Ph.D.", "Mike Barnett", "Eunhye Cho", "Stephanie Couch", "Leigh Estabrooks", "David Jackson", "Jeffrey Kiel", "So Lim Kim", "Helen Zhang"]
 showToc: true
 disableAnchoredHeadings: false
 ---
@@ -15,12 +16,12 @@ This research focuses on the intersection of STEM education and second language 
 ---
 
 ## Culturally Relevant & Invention-Based Learning
-* **[Bicultural Middle School Students' Learning in a Culturally Relevant Science Classroom](BiculturalScience.pdf)** (2018)  
-  Explores how middle schoolers from diverse backgrounds engage with science when the curriculum intentionally mirrors their cultural identities and lived experiences.
-* **[Culturally Relevant Science: Incorporating Visualizations and Home Culture](CulturallyRelevantScience.pdf)** (2016)  
-  Analyzes the impact of using visual aids and home-culture connections within an invention-oriented curriculum to foster deeper scientific engagement.
-* **[English Learners' Science-Literacy Practice through Explicit Writing Instruction](ExplicitWriting.pdf)** (2020)  
+* **[English Learners' Science-Literacy Practice through Explicit Writing Instruction](ExplicitWriting.pdf)** (2020)
   Investigates how explicit instruction in scientific writing, embedded within invention-based tasks, supports the development of technical literacy for English learners.
+* **[Bicultural Middle School Students' Learning in a Culturally Relevant Science Classroom](BiculturalScience.pdf)** (2018)
+  Explores how middle schoolers from diverse backgrounds engage with science when the curriculum intentionally mirrors their cultural identities and lived experiences.
+* **[Culturally Relevant Science: Incorporating Visualizations and Home Culture](CulturallyRelevantScience.pdf)** (2016)
+  Analyzes the impact of using visual aids and home-culture connections within an invention-oriented curriculum to foster deeper scientific engagement.
 
 ## Science-Literacy & Writing Strategies
 * **[Empowering Diverse Learners: Integrating Writing-to-Learn Strategies in Science](WritingToLearn.pdf)** (2021)  
