@@ -65,3 +65,13 @@
     color: #0000cd !important; /* Medium Blue on hover */
     box-shadow: 0 2px 0 #0000cd;
 }
+
+.dark .post-content a {
+    color: #58a6ff !important;
+    box-shadow: 0 1px 0 #58a6ff;
+}
+
+.dark .post-content a:hover {
+    color: #79b8ff !important;
+    box-shadow: 0 2px 0 #79b8ff;
+}

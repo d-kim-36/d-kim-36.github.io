@@ -20,7 +20,7 @@ description: "Office hours and appointment scheduling for Deoksoon Kim, Ph.D. at
 
 #### Location
 
-[Campion Hall, Room 127](https://eunha.studio/location)  
+[Campion Hall, Room 127](/location/)  
 Lynch School of Education and Human Development  
 Boston College
 
