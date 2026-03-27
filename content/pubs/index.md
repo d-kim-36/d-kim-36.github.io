@@ -8,8 +8,8 @@ TocOpen: true
 # Research and Scholarly Publications
 
 ### Books & Edited Volumes
-* Wortham, S., Kim, D., May, S. (Eds.) (2017). **[Encyclopedia of Language and Education: Volume 3, Discourse and Education](./discourse.pdf)**. NY: Springer.
 * Kim, D., Wortham, S., Borowiec, K., Yatsu, D. K., Ha, S., Carroll, S., Wang, L., & Kim, J. (2021). **[Formative education online: Cultivating wholeness, purpose, and community in virtual environments](./formative.pdf)**. Lynch School of Education and Human Development.
+* Wortham, S., Kim, D., May, S. (Eds.) (2017). **[Encyclopedia of Language and Education: Volume 3, Discourse and Education](./discourse.pdf)**. NY: Springer.
 
 ---
 
