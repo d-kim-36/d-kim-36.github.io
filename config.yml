@@ -33,6 +33,9 @@ menu:
         - name: Gallery
           url: gallery/
           weight: 70
+        - name: DK School
+          url: https://school.eunha.studio
+          weight: 75
         - name: TLab
           url: https://www.bc.edu/bc-web/schools/lynch-school/sites/labs/transformative-education-lab.html
           weight: 80
@@ -78,6 +81,8 @@ params:
               url: media/
             - name: Gallery
               url: gallery/
+            - name: DK English School
+              url: https://school.eunha.studio
             - name: Transformative Education Lab (TLab)
               url: https://www.bc.edu/bc-web/schools/lynch-school/sites/labs/transformative-education-lab.html
 
