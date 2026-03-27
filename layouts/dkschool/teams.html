@@ -1,0 +1,201 @@
+{{ define "main" }}
+{{ partial "dkschool/subnav.html" . }}
+
+<style>
+  .dk-page-hero {
+    background: var(--dk-primary);
+    color: #fff;
+    padding: 48px 24px;
+    text-align: center;
+  }
+  .dk-page-hero h1 {
+    font-size: clamp(24px, 3vw, 38px);
+    font-weight: 700;
+    letter-spacing: -0.3px;
+    color: #fff !important;
+  }
+
+  /* ── FOUNDER ── */
+  .dk-founder-wrap {
+    display: flex;
+    justify-content: center;
+    padding: 56px 24px 40px;
+  }
+  .dk-founder-card {
+    background: var(--dk-white);
+    border: 2px solid var(--dk-border);
+    border-radius: var(--dk-radius);
+    padding: 40px 48px;
+    max-width: 480px;
+    width: 100%;
+    text-align: center;
+    transition: border-color 0.2s;
+  }
+  .dk-founder-card:hover { border-color: #6a7ba2; }
+  .dk-founder-card img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--dk-border);
+    margin-bottom: 20px;
+  }
+  .dk-founder-placeholder-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: var(--dk-light);
+    border: 2px solid var(--dk-border);
+    margin: 0 auto 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    color: var(--dk-muted);
+  }
+  .dk-founder-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--dk-secondary);
+    margin-bottom: 8px;
+  }
+  .dk-member-name {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--dk-text);
+    margin-bottom: 4px;
+  }
+  .dk-member-role {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--dk-secondary);
+    margin-bottom: 14px;
+  }
+  .dk-member-bio {
+    font-size: 14px;
+    color: var(--dk-muted);
+    line-height: 1.65;
+  }
+
+  /* ── TEAM DIVIDER ── */
+  .dk-team-section {
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 0 24px 64px;
+  }
+  .dk-team-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--dk-muted);
+    margin-bottom: 24px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--dk-border);
+  }
+
+  /* ── TEAM GRID ── */
+  .dk-team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+  }
+  .dk-team-card {
+    background: var(--dk-white);
+    border: 2px solid var(--dk-border);
+    border-radius: var(--dk-radius);
+    padding: 28px 20px;
+    text-align: center;
+    transition: border-color 0.2s, transform 0.15s;
+  }
+  .dk-team-card:hover {
+    border-color: #6a7ba2;
+    transform: translateY(-2px);
+  }
+  .dk-team-card img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--dk-border);
+    margin-bottom: 14px;
+  }
+  .dk-team-placeholder-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: var(--dk-light);
+    border: 2px solid var(--dk-border);
+    margin: 0 auto 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 26px;
+    color: var(--dk-muted);
+  }
+  .dk-team-card .dk-member-name { font-size: 16px; }
+  .dk-team-card .dk-member-role { font-size: 13px; margin-bottom: 10px; }
+  .dk-team-card .dk-member-bio  { font-size: 13px; }
+
+  /* dark mode card surfaces */
+  .dark .dk-founder-card,
+  .dark .dk-team-card {
+    background: rgb(46, 46, 51);
+    border-color: rgb(51, 51, 51);
+  }
+  .dark .dk-member-name { color: rgb(218, 218, 219); }
+  .dark .dk-founder-placeholder-img,
+  .dark .dk-team-placeholder-img {
+    background: rgb(65, 66, 68);
+    border-color: rgb(51, 51, 51);
+  }
+</style>
+
+<div class="dk-page-hero">
+  <h1>Our Teams</h1>
+</div>
+
+<!-- Founder -->
+<div class="dk-founder-wrap">
+  <div class="dk-founder-card">
+    <div class="dk-founder-placeholder-img">&#128100;</div>
+    <div class="dk-founder-label">Founder</div>
+    <div class="dk-member-name">To be filled</div>
+    <div class="dk-member-role">Founder &amp; Director</div>
+    <div class="dk-member-bio">Bio and background will appear here.</div>
+  </div>
+</div>
+
+<!-- Team Members -->
+<div class="dk-team-section">
+  <div class="dk-team-label">Team Members</div>
+  <div class="dk-team-grid">
+    <div class="dk-team-card">
+      <div class="dk-team-placeholder-img">&#128100;</div>
+      <div class="dk-member-name">To be filled</div>
+      <div class="dk-member-role">Role / Title</div>
+      <div class="dk-member-bio">Short bio or description will appear here.</div>
+    </div>
+    <div class="dk-team-card">
+      <div class="dk-team-placeholder-img">&#128100;</div>
+      <div class="dk-member-name">To be filled</div>
+      <div class="dk-member-role">Role / Title</div>
+      <div class="dk-member-bio">Short bio or description will appear here.</div>
+    </div>
+    <div class="dk-team-card">
+      <div class="dk-team-placeholder-img">&#128100;</div>
+      <div class="dk-member-name">To be filled</div>
+      <div class="dk-member-role">Role / Title</div>
+      <div class="dk-member-bio">Short bio or description will appear here.</div>
+    </div>
+    <div class="dk-team-card">
+      <div class="dk-team-placeholder-img">&#128100;</div>
+      <div class="dk-member-name">To be filled</div>
+      <div class="dk-member-role">Role / Title</div>
+      <div class="dk-member-bio">Short bio or description will appear here.</div>
+    </div>
+  </div>
+</div>
+{{ end }}
