@@ -1,0 +1,12 @@
+<a href="{{ .Get "image" }}"
+   data-sub-html="<div style='text-align:center;'><h4 style='color:#fff;margin-bottom:5px;'>{{ .Get "title" }}</h4><p style='color:#ccc;margin:0;'>{{ .Get "sub" }}</p></div>">
+  <div class="content-card">
+    <div class="card-media">
+      <img src="{{ .Get "image" }}" alt="{{ .Get "title" }}" loading="lazy">
+    </div>
+    <div class="card-body">
+      <span class="card-title">{{ .Get "title" }}</span>
+      <p class="card-desc">{{ .Get "desc" }}</p>
+    </div>
+  </div>
+</a>
