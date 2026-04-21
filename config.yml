@@ -126,6 +126,8 @@ markup:
   goldmark:
     renderer:
       unsafe: true # Allows HTML if needed
+    extensions:
+      attributes: true
     highlight:
         guessSyntax: true
         style: autumn 

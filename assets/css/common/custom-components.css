@@ -1,0 +1,83 @@
+/* ── Shared component styles for Tier 2 custom pages (media, gallery, dk-english) ── */
+
+.content-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+  margin-top: 20px;
+}
+
+.content-card {
+  background: var(--entry);
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.content-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+.dark .content-card {
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+.card-body {
+  padding: 16px 20px 20px;
+}
+
+.section-header {
+  color: #8a100b;
+  margin-top: 40px;
+  border-bottom: 2px solid #8a100b;
+  padding-bottom: 8px;
+  font-weight: 700;
+}
+.dark .section-header {
+  color: #e07070;
+  border-bottom-color: #e07070;
+}
+
+.card-title {
+  color: var(--primary);
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin: 0 0 6px;
+  display: block;
+}
+
+.card-desc {
+  color: var(--secondary);
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* 16:9 wrapper — works for both <img> and <iframe> */
+.card-media {
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  position: relative;
+}
+.card-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.card-media iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* Gallery link reset — LightGallery anchor wraps cards */
+.category-gallery a {
+  text-decoration: none !important;
+  border: none !important;
+  border-bottom: none !important;
+  box-shadow: none !important;
+}
