@@ -62,7 +62,7 @@ params:
     profileMode:
           enabled: true
           title: Deoksoon Kim, Ph.D.
-          subtitle: "Professor at the Lynch School of Education and Human Development, Boston College. My research focuses on understanding the needs of immigrant students to facilitate English acquisition and academic success through instructional technology."
+          subtitle: '<span class="profile-role">Professor at the Lynch School of Education and Human Development, Boston College</span><span class="profile-bio">My research focuses on understanding the needs of immigrant students to facilitate English acquisition and academic success through instructional technology.</span>'
           imageUrl: "avatar.jpg"
           imageWidth: 180
           imageHeight: 180

@@ -46,3 +46,59 @@
 .button:hover {
     background: var(--lightcolor);
 }
+
+/* ── Typographic split: role line vs bio paragraph ── */
+.profile_inner > span {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.profile-role {
+    display: block;
+    font-size: 1.0rem;
+    font-weight: 600;
+    color: var(--primary);
+    line-height: 1.4;
+}
+
+.profile-bio {
+    display: block;
+    font-size: var(--homesize);
+    color: var(--content);
+    line-height: var(--lineheight);
+}
+
+/* ── Sleek CSS tooltip for social icons ── */
+.social-icons a {
+    position: relative;
+}
+
+.social-icons a::after {
+    content: attr(title);
+    position: absolute;
+    bottom: calc(100% + 7px);
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(20, 20, 20, 0.88);
+    color: #fff;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    padding: 4px 9px;
+    border-radius: 5px;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.15s ease;
+    z-index: 10;
+}
+
+.social-icons a:hover::after {
+    opacity: 1;
+}
+
+.dark .social-icons a::after {
+    background: rgba(240, 240, 240, 0.92);
+    color: #1a1a1a;
+}
