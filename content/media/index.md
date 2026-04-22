@@ -3,7 +3,7 @@ title: "Media & Interviews"
 layout: "single"
 ---
 
-## Teachers' Voice Series
+## Teachers' Voice Series {.section-header}
 *A collection of reflections from educators on digital storytelling and formative education.*
 
 <div class="content-grid">
@@ -16,7 +16,7 @@ layout: "single"
 
 ---
 
-## Projects & Creative Media
+## Projects & Creative Media {.section-header}
 
 <div class="content-grid">
   {{< video-card id="hfIUEVe1F2M?si=4Wl7uxp1FZ3eKYcW" title="DK English School Song" desc="A creative project showcasing community and language use through music." >}}
