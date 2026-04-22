@@ -83,7 +83,7 @@ params:
               url: gallery/
             - name: DK English School
               url: /dk-english/
-            - name: Transformative Education Lab (TLab)
+            - name: TLab
               url: https://www.bc.edu/bc-web/schools/lynch-school/sites/labs/transformative-education-lab.html
 
     socialIcons:
@@ -95,7 +95,7 @@ params:
           url: https://scholar.google.com/citations?hl=en&user=YvCec_sAAAAJ
         - name: YouTube
           url: https://www.youtube.com/@TLABTogether
-        - name: Email
+        - name: Newsletter
           url: https://www.bc.edu/content/bc-web/schools/lynch-school/sites/labs/transformative-education-lab/media-library/newsletter-archive.html
         # - name: Bluesky
         #   url: https://bsky.app/profile/pmichaillat.bsky.social
