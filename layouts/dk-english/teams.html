@@ -82,7 +82,7 @@
     margin-bottom: 48px;
   }
   .dk-featured-card {
-    max-width: 260px;
+    max-width: 380px;
     width: 100%;
     text-align: center;
   }
@@ -140,24 +140,37 @@
   }
 
   /* ── PORTRAIT GRIDS ── */
-  .dk-portrait-grid-3 {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 28px;
-  }
   .dk-portrait-grid-4 {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 24px;
   }
+  /* Teachers: ~80% of curriculum card width */
+  .dk-portrait-grid-5 {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 22px;
+  }
+  /* Affiliated: ~70% of curriculum card width */
+  .dk-portrait-grid-6 {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 18px;
+  }
 
+  @media (max-width: 1100px) {
+    .dk-portrait-grid-5 { grid-template-columns: repeat(4, 1fr); }
+    .dk-portrait-grid-6 { grid-template-columns: repeat(4, 1fr); }
+  }
   @media (max-width: 900px) {
-    .dk-portrait-grid-3 { grid-template-columns: repeat(2, 1fr); }
     .dk-portrait-grid-4 { grid-template-columns: repeat(2, 1fr); }
+    .dk-portrait-grid-5 { grid-template-columns: repeat(3, 1fr); }
+    .dk-portrait-grid-6 { grid-template-columns: repeat(3, 1fr); }
   }
   @media (max-width: 500px) {
-    .dk-portrait-grid-3,
-    .dk-portrait-grid-4 { grid-template-columns: 1fr; max-width: 280px; margin: 0 auto; }
+    .dk-portrait-grid-4,
+    .dk-portrait-grid-5,
+    .dk-portrait-grid-6 { grid-template-columns: 1fr; max-width: 280px; margin: 0 auto; }
   }
 
   /* ── DARK MODE ── */
@@ -233,7 +246,7 @@
   <!-- ── OUR TEACHERS ── -->
   <div class="dk-section-heading">Our Teachers</div>
 
-  <div class="dk-portrait-grid-3" style="margin-top:44px;">
+  <div class="dk-portrait-grid-5" style="margin-top:44px;">
     <div style="text-align:center;">
       <div class="dk-portrait-photo">
         <img src="/dk-english-photos/yuqi.avif" alt="Yuqi Wang">
@@ -301,7 +314,7 @@
     Please also check out our <a href="#">DK Mentoring Online website</a> for more detailed information.
   </div>
 
-  <div class="dk-portrait-grid-4">
+  <div class="dk-portrait-grid-6">
     <div style="text-align:center;">
       <div class="dk-portrait-photo">
         <img src="/dk-english-photos/lacey.avif" alt="Lacey Zhang">
