@@ -15,9 +15,15 @@
     color: #fff !important;
   }
 
+  /* Override PaperMod's 720px main-width constraint for this page only */
+  .main {
+    max-width: min(1600px, 96vw);
+    padding: 0;
+  }
+
   /* ── SECTION WRAPPER ── */
   .dk-team-wrap {
-    max-width: 1440px;
+    max-width: 1500px;
     margin: 0 auto;
     padding: 64px 40px;
   }
