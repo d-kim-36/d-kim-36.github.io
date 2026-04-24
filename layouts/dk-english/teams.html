@@ -21,9 +21,8 @@
     padding: 0;
   }
 
-  /* ── SECTION WRAPPER ── */
   .dk-team-wrap {
-    max-width: 1500px;
+    max-width: 900px;
     margin: 0 auto;
     padding: 64px 40px;
   }
@@ -48,33 +47,6 @@
     border-radius: 2px;
   }
 
-  /* ── SECTION SUBTITLE ── */
-  .dk-section-subtitle {
-    text-align: center;
-    font-size: 13px;
-    color: var(--dk-muted);
-    margin-bottom: 44px;
-    line-height: 1.6;
-  }
-  .dk-section-subtitle a {
-    color: var(--dk-secondary);
-    text-decoration: underline;
-  }
-
-  /* spacing when there's no subtitle */
-  .dk-section-heading + .dk-featured-wrap,
-  .dk-section-heading + .dk-portrait-grid-3,
-  .dk-section-heading + .dk-portrait-grid-4 {
-    margin-top: 44px;
-  }
-
-  /* ── SECTION DIVIDER ── */
-  .dk-section-divider {
-    border: none;
-    border-top: 1px solid var(--dk-border);
-    margin: 64px 0;
-  }
-
   /* ── FEATURED PORTRAIT (founder/director) ── */
   .dk-featured-wrap {
     display: flex;
@@ -82,13 +54,9 @@
     margin-bottom: 48px;
   }
   .dk-featured-card {
-    max-width: 380px;
+    max-width: 340px;
     width: 100%;
     text-align: center;
-  }
-  .dk-featured-card .dk-portrait-photo {
-    aspect-ratio: 3 / 4;
-    max-height: 320px;
   }
   .dk-featured-card .dk-portrait-name { font-size: 20px; }
   .dk-featured-card .dk-portrait-role { font-size: 14px; margin-bottom: 12px; }
@@ -114,63 +82,25 @@
     object-position: top center;
     display: block;
   }
-  .dk-portrait-photo svg {
-    width: 45%;
-    color: var(--dk-border);
-  }
 
   /* ── PORTRAIT TEXT ── */
   .dk-portrait-name {
-    font-size: 15px;
+    font-size: 17px;
     font-weight: 700;
     color: var(--dk-text);
     margin-bottom: 3px;
   }
   .dk-portrait-role {
-    font-size: 12.5px;
+    font-size: 13px;
     font-style: italic;
     color: var(--dk-secondary);
     margin-bottom: 10px;
   }
   .dk-portrait-bio {
-    font-size: 12.5px;
+    font-size: 13px;
     color: var(--dk-muted);
     line-height: 1.65;
     text-align: left;
-  }
-
-  /* ── PORTRAIT GRIDS ── */
-  .dk-portrait-grid-4 {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 24px;
-  }
-  /* Teachers: ~80% of curriculum card width */
-  .dk-portrait-grid-5 {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 22px;
-  }
-  /* Affiliated: ~70% of curriculum card width */
-  .dk-portrait-grid-6 {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    gap: 18px;
-  }
-
-  @media (max-width: 1100px) {
-    .dk-portrait-grid-5 { grid-template-columns: repeat(4, 1fr); }
-    .dk-portrait-grid-6 { grid-template-columns: repeat(4, 1fr); }
-  }
-  @media (max-width: 900px) {
-    .dk-portrait-grid-4 { grid-template-columns: repeat(2, 1fr); }
-    .dk-portrait-grid-5 { grid-template-columns: repeat(3, 1fr); }
-    .dk-portrait-grid-6 { grid-template-columns: repeat(3, 1fr); }
-  }
-  @media (max-width: 500px) {
-    .dk-portrait-grid-4,
-    .dk-portrait-grid-5,
-    .dk-portrait-grid-6 { grid-template-columns: 1fr; max-width: 280px; margin: 0 auto; }
   }
 
   /* ── DARK MODE ── */
@@ -178,7 +108,6 @@
     background: rgb(46, 46, 51);
     border-color: rgb(51, 51, 51);
   }
-  .dark .dk-portrait-photo svg { color: rgb(65, 66, 68); }
   .dark .dk-portrait-name { color: rgb(218, 218, 219); }
 </style>
 
@@ -188,10 +117,9 @@
 
 <div class="dk-team-wrap">
 
-  <!-- ── CURRICULUM DEVELOPMENT ── -->
-  <div class="dk-section-heading">Curriculum Development</div>
+  <div class="dk-section-heading" style="margin-bottom: 44px;">Curriculum Development</div>
 
-  <!-- Director (featured) -->
+  <!-- Deoksoon Kim — featured -->
   <div class="dk-featured-wrap">
     <div class="dk-featured-card">
       <div class="dk-portrait-photo">
@@ -205,8 +133,8 @@
     </div>
   </div>
 
-  <!-- Curriculum team row (4 people) -->
-  <div class="dk-portrait-grid-4">
+  <!-- Drina & Katrina — 2-col row -->
+  <div style="display:grid; grid-template-columns: repeat(2, 1fr); gap: 32px;">
     <div style="text-align:center;">
       <div class="dk-portrait-photo">
         <img src="/dk-english-photos/drina.avif" alt="Drina Yatsu">
@@ -222,250 +150,6 @@
       <div class="dk-portrait-name">Katrina Borowiec</div>
       <div class="dk-portrait-role">Head of Research &amp; Teacher</div>
       <div class="dk-portrait-bio">Katrina Borowiec is a PhD Candidate in Measurement, Evaluation, Statistics, and Assessment (MESA) at Boston College. In addition to her experience as a teaching assistant and statistics tutor, she has six years of part-time professional experience working with adult learners. Her favorite part of teaching is watching students develop their academic confidence.</div>
-    </div>
-    <div style="text-align:center;">
-      <div class="dk-portrait-photo">
-        <img src="/dk-english-photos/yoonmi.avif" alt="Yoonmi Kang">
-      </div>
-      <div class="dk-portrait-name">Yoonmi Kang</div>
-      <div class="dk-portrait-role">Assistant Director &amp; Teacher</div>
-      <div class="dk-portrait-bio">Yoonmi Kang is a graduate student studying Education Policy and Analysis at Harvard Graduate School of Education. She has experience teaching elementary students in various schools, including an international school in Korea and suburban and urban schools in the Boston area. She also has undergraduate degrees in Elementary Education, and Applied Psychology and Human Development.</div>
-    </div>
-    <div style="text-align:center;">
-      <div class="dk-portrait-photo">
-        <img src="/dk-english-photos/maryaustin.avif" alt="Mary Austin">
-      </div>
-      <div class="dk-portrait-name">Mary Austin</div>
-      <div class="dk-portrait-role">Teacher Coordinator &amp; Teacher</div>
-      <div class="dk-portrait-bio">Mary Austin is a fourth-year student studying Secondary Education and History at Boston College. She has taught at both the middle school and high school level. She is also part of the five-year graduate program in Curriculum and Instruction. Her teaching philosophy is rooted in making learning hands-on, engaging, and relevant to students' lives and interests.</div>
-    </div>
-  </div>
-
-  <hr class="dk-section-divider">
-
-  <!-- ── OUR TEACHERS ── -->
-  <div class="dk-section-heading">Our Teachers</div>
-
-  <div style="display:grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 22px; margin-top: 44px;">
-    <div style="text-align:center;">
-      <div class="dk-portrait-photo">
-        <img src="/dk-english-photos/yuqi.avif" alt="Yuqi Wang">
-      </div>
-      <div class="dk-portrait-name">Yuqi Wang</div>
-      <div class="dk-portrait-role">Teacher</div>
-      <div class="dk-portrait-bio">Yuqi Wang is a graduate student studying Curriculum and Instruction at Boston College. She has experience teaching English as a teacher and assistant in the Chinese international school, and has an undergraduate degree in Preschool Education. She believes that teaching to motivate students' interest in learning is a good way for students to learn.</div>
-    </div>
-    <div style="text-align:center;">
-      <div class="dk-portrait-photo">
-        <img src="/dk-english-photos/ben.avif" alt="Ben Chieng">
-      </div>
-      <div class="dk-portrait-name">Ben Chieng</div>
-      <div class="dk-portrait-role">Teacher</div>
-      <div class="dk-portrait-bio">Ben is currently a junior at Boston College, majoring in International Studies. Having been a teaching assistant, he is interested in developing his teaching further.</div>
-    </div>
-    <div style="text-align:center;">
-      <div class="dk-portrait-photo">
-        <img src="/dk-english-photos/amy.avif" alt="Amy Li">
-      </div>
-      <div class="dk-portrait-name">Amy Li</div>
-      <div class="dk-portrait-role">Teacher</div>
-      <div class="dk-portrait-bio">Amy is a junior double majoring in Applied Psychology &amp; Human Development and Economics at Boston College. She is interested in Education and Counseling, and enjoys working with children. She has had four years of working with children with disabilities.</div>
-    </div>
-    <div style="text-align:center;">
-      <div class="dk-portrait-photo">
-        <img src="/dk-english-photos/ran.avif" alt="Ran Tao">
-      </div>
-      <div class="dk-portrait-name">Ran Tao</div>
-      <div class="dk-portrait-role">Teacher</div>
-      <div class="dk-portrait-bio">Ran is currently a junior at Boston College, double majoring in Applied Psychology &amp; Human Development and Communication. She joined Dr. Kim's research team in spring 2023. Ran has already had an interest in the educational system, as well as other areas such as counseling and Human Resources.</div>
-    </div>
-    <div style="text-align:center;">
-      <div class="dk-portrait-photo">
-        <img src="/dk-english-photos/sylvie.avif" alt="Sylvie Qiu">
-      </div>
-      <div class="dk-portrait-name">Sylvie Qiu</div>
-      <div class="dk-portrait-role">Teacher</div>
-      <div class="dk-portrait-bio">Sylvie Qiu is a senior at Boston College majoring in Applied Psychology and Human Development and minoring in Linguistics. She has experience in teaching both English and Mandarin. She is passionate about language education and wishes to create more learning opportunities for students with diverse backgrounds.</div>
-    </div>
-    <div style="text-align:center;">
-      <div class="dk-portrait-photo">
-        <img src="/dk-english-photos/sarah.avif" alt="Sarah Alexander">
-      </div>
-      <div class="dk-portrait-name">Sarah Alexander</div>
-      <div class="dk-portrait-role">Teacher</div>
-      <div class="dk-portrait-bio">Sarah Alexander is a junior at Boston College studying Applied Psychology and Human Development. She has experience working with kids in many different settings such as educational summer camps. DK English School has given her the opportunity to teach ELL in an online setting, which has opened ELL teaching as a possible career path as she enjoys seeing students quickly improve and benefit.</div>
-    </div>
-    <div style="text-align:center;">
-      <div class="dk-portrait-photo">
-        <img src="/dk-english-photos/hailey.avif" alt="Hailey Shin">
-      </div>
-      <div class="dk-portrait-name">Hailey Shin</div>
-      <div class="dk-portrait-role">Teacher</div>
-      <div class="dk-portrait-bio">Hailey Shin is a senior double-majoring in Elementary Education and Applied Psychology &amp; Human Development at Boston College. She was a student-teacher for four different elementary schools in the Boston Public Schools District. After graduation, she plans to pursue her passion for educational equity at USC Rossier School of Education and teach students with mild/moderate disabilities in urban schools.</div>
-    </div>
-  </div>
-
-  <hr class="dk-section-divider">
-
-  <!-- ── DK MENTORING ONLINE AFFILIATED MEMBERS ── -->
-  <div class="dk-section-heading">DK Mentoring Online Affiliated Members</div>
-  <div class="dk-section-subtitle">
-    The following members are from our DK Mentoring Online research team.<br>
-    Please also check out our <a href="#">DK Mentoring Online website</a> for more detailed information.
-  </div>
-
-  <div style="display:grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 18px;">
-    <div style="text-align:center;">
-      <div class="dk-portrait-photo">
-        <img src="/dk-english-photos/lacey.avif" alt="Lacey Zhang">
-      </div>
-      <div class="dk-portrait-name">Lacey Zhang</div>
-      <div class="dk-portrait-role">Affiliated Member</div>
-      <div class="dk-portrait-bio">Lacey is a senior at Boston College studying applied psychology and human development. She has TA experience and tutored English classes for elementary students. She also has experience tutoring children with autism and children with down syndrome.</div>
-    </div>
-    <div style="text-align:center;">
-      <div class="dk-portrait-photo">
-        <img src="/dk-english-photos/yi.avif" alt="Yi Zhao">
-      </div>
-      <div class="dk-portrait-name">Yi Zhao</div>
-      <div class="dk-portrait-role">Affiliated Member</div>
-      <div class="dk-portrait-bio">Yi Zhao studies Language and Literacy at Harvard Graduate School of Education. She has experience teaching various languages including English, Chinese, and Spanish. Her teaching philosophy is to discover students' uniqueness and bring every student equitable education.</div>
-    </div>
-    <div style="text-align:center;">
-      <div class="dk-portrait-photo">
-        <img src="/dk-english-photos/marybrooks.avif" alt="Mary Brooks">
-      </div>
-      <div class="dk-portrait-name">Mary Brooks</div>
-      <div class="dk-portrait-role">Affiliated Member</div>
-      <div class="dk-portrait-bio">Mary Brooks is a junior at Boston College studying Applied Psychology and minoring in Hispanic Studies as well as Peace, Faith, and Justice. She has been a Resident Assistant for freshmen for the past two years, which has made her realize her passion for mentoring and her interest in pursuing higher education.</div>
-    </div>
-    <div style="text-align:center;">
-      <div class="dk-portrait-photo">
-        <img src="/dk-english-photos/yan.avif" alt="Yan Li">
-      </div>
-      <div class="dk-portrait-name">Yan Li</div>
-      <div class="dk-portrait-role">Affiliated Member</div>
-      <div class="dk-portrait-bio">Yan Li is a graduate student in Curriculum and Instruction at Boston College with a Bachelor's degree in elementary education. She has worked in elementary and middle schools in the Greater Boston area for the past 4 years and tutored for 7 years. Her goal is to meet each student where they are to support them in learning the way they learn best.</div>
-    </div>
-    <div style="text-align:center;">
-      <div class="dk-portrait-photo">
-        <img src="/dk-english-photos/may.avif" alt="May Chen">
-      </div>
-      <div class="dk-portrait-name">May Chen</div>
-      <div class="dk-portrait-role">Affiliated Member</div>
-      <div class="dk-portrait-bio">May Chen is currently a junior at Boston College, majoring in Applied Psychology &amp; Human Development and Economics. As a member of BC's Eagle Volunteers, she worked as a teaching assistant in local elementary schools and has two years of experience in one-on-one ESL tutoring.</div>
-    </div>
-    <div style="text-align:center;">
-      <div class="dk-portrait-photo">
-        <img src="/dk-english-photos/amanda.avif" alt="Amanda Doria">
-      </div>
-      <div class="dk-portrait-name">Amanda Doria</div>
-      <div class="dk-portrait-role">Affiliated Member</div>
-      <div class="dk-portrait-bio">Amanda Doria is a junior at Boston College majoring in Elementary Education and Communication. In addition to working in a variety of classroom settings, she has also been a camp counselor for many years. Her favorite part of teaching is getting to know the students and helping them learn more about something they're excited about.</div>
-    </div>
-    <div style="text-align:center;">
-      <div class="dk-portrait-photo">
-        <img src="/dk-english-photos/thea.avif" alt="Thea He">
-      </div>
-      <div class="dk-portrait-name">Thea He</div>
-      <div class="dk-portrait-role">Affiliated Member</div>
-      <div class="dk-portrait-bio">Thea He is currently a senior at Tianjin University of Science and Technology, majoring in Business English. She has worked as a teacher assistant in different education groups and as Head of Operation in Yozer Community English School. Her interest in media technology and internship at TAL inspire her to pursue a passion in Education Technology.</div>
-    </div>
-    <div style="text-align:center;">
-      <div class="dk-portrait-photo">
-        <img src="/dk-english-photos/lily.avif" alt="Lily Xu">
-      </div>
-      <div class="dk-portrait-name">Lily Xu</div>
-      <div class="dk-portrait-role">Affiliated Member</div>
-      <div class="dk-portrait-bio">Lily is a sophomore undergraduate at Boston College in Applied Psychology &amp; Human Development and Communication. She joined the DS research team in fall 2019. She is passionate about higher education and educational policy, and she wants to help children in remote regions in China.</div>
-    </div>
-    <div style="text-align:center;">
-      <div class="dk-portrait-photo">
-        <img src="/dk-english-photos/jingyi.avif" alt="Jingyi Xu">
-      </div>
-      <div class="dk-portrait-name">Jingyi Xu</div>
-      <div class="dk-portrait-role">Affiliated Member</div>
-      <div class="dk-portrait-bio">Jingyi is a junior at Boston College studying Applied Psychology &amp; Human Development and Economics. She joined the DS research team in fall 2018. She also works at the Office of International Students &amp; Scholars and cares about affairs related to international students.</div>
-    </div>
-    <div style="text-align:center;">
-      <div class="dk-portrait-photo">
-        <img src="/dk-english-photos/yoly.avif" alt="Yoly Liu">
-      </div>
-      <div class="dk-portrait-name">Yoly Liu</div>
-      <div class="dk-portrait-role">Affiliated Member</div>
-      <div class="dk-portrait-bio">Yoly is currently an honors junior in Lynch School of Education and Human Development at Boston College. She joined Dr. Kim's research team in spring 2019 and has been working on multiple projects. Yoly is passionate about building effective and sustainable education institutions worldwide and advocating for education equity and social justice.</div>
-    </div>
-    <div style="text-align:center;">
-      <div class="dk-portrait-photo">
-        <img src="/dk-english-photos/ami.avif" alt="Amy Tian">
-      </div>
-      <div class="dk-portrait-name">Amy Tian</div>
-      <div class="dk-portrait-role">Affiliated Member</div>
-      <div class="dk-portrait-bio">Amy is currently a high school senior at The Hockaday School. She has been tutoring elementary school students around her district for the past four years. She joined Dr. Kim's website team in June 2021 and is working with Katrina on various research projects, expanding her interests in marketing, global teaching, and academic research.</div>
-    </div>
-    <div style="text-align:center;">
-      <div class="dk-portrait-photo">
-        <img src="/dk-english-photos/yezi.avif" alt="Yezi Zheng">
-      </div>
-      <div class="dk-portrait-name">Yezi Zheng</div>
-      <div class="dk-portrait-role">Affiliated Member</div>
-      <div class="dk-portrait-bio">Yezi is a junior studying at Boston College, double majoring in Applied Psychology and Mathematics with a minor in History. After exploring different majors, she developed a strong interest in mental health education and continues to evaluate and explore the educational field.</div>
-    </div>
-    <div style="text-align:center;">
-      <div class="dk-portrait-photo">
-        <img src="/dk-english-photos/catherine.avif" alt="Catherine Day">
-      </div>
-      <div class="dk-portrait-name">Catherine Day</div>
-      <div class="dk-portrait-role">Affiliated Member</div>
-      <div class="dk-portrait-bio">Catherine Day is a Russian language and literature major at Boston College. She has two years of experience teaching elementary school and middle school ESL students at Edison School in Brighton. Her favorite part of teaching is forming connections with her students and having fun in the classroom.</div>
-    </div>
-    <div style="text-align:center;">
-      <div class="dk-portrait-photo">
-        <img src="/dk-english-photos/tiffany.avif" alt="Tiffany Zhu">
-      </div>
-      <div class="dk-portrait-name">Tiffany Zhu</div>
-      <div class="dk-portrait-role">Affiliated Member</div>
-      <div class="dk-portrait-bio">Tiffany is currently a junior at Boston College, majoring in Applied Psychology &amp; Human Development, minoring in Higher Education and Korean Studies. She joined Dr. Kim's research team in spring 2020. She is interested in Higher Education in community and school settings, Human Resources, and educational technology &amp; media.</div>
-    </div>
-    <div style="text-align:center;">
-      <div class="dk-portrait-photo">
-        <img src="/dk-english-photos/yanzhi.avif" alt="Yanzhi Wang">
-      </div>
-      <div class="dk-portrait-name">Yanzhi Wang</div>
-      <div class="dk-portrait-role">Affiliated Member</div>
-      <div class="dk-portrait-bio">Yanzhi is a senior at Boston College majoring in Applied Psychology and Human Development with minors in English and Theater. Her teaching philosophy is to cultivate students' learning enthusiasm through creative self-expression and idea-sharing. She believes education is about empowerment, and that's what facilitates change.</div>
-    </div>
-    <div style="text-align:center;">
-      <div class="dk-portrait-photo">
-        <img src="/dk-english-photos/annie.avif" alt="Annie Miles">
-      </div>
-      <div class="dk-portrait-name">Annie Miles</div>
-      <div class="dk-portrait-role">Affiliated Member</div>
-      <div class="dk-portrait-bio">Annie Miles is an Applied Psychology and Elementary Education major who has been working with children for as long as she can remember. All of her best memories in teaching come from seeing the "lightbulb" go off in students' heads when they understand a concept. She loves getting to know students' hobbies, goals, and personalities.</div>
-    </div>
-    <div style="text-align:center;">
-      <div class="dk-portrait-photo">
-        <img src="/dk-english-photos/ciara.avif" alt="Ciara Rushe">
-      </div>
-      <div class="dk-portrait-name">Ciara Rushe</div>
-      <div class="dk-portrait-role">Affiliated Member</div>
-      <div class="dk-portrait-bio">Ciara Rushe is a junior at Boston College studying Elementary Education and Applied Psychology &amp; Human Development. She has a passion for working with children and has dreamed of becoming a teacher since she was five years old. She is currently pursuing the TELL certification from Boston College and has thoroughly enjoyed her first bilingualism course.</div>
-    </div>
-    <div style="text-align:center;">
-      <div class="dk-portrait-photo">
-        <img src="/dk-english-photos/isabella.avif" alt="Isabella Benson">
-      </div>
-      <div class="dk-portrait-name">Isabella Benson</div>
-      <div class="dk-portrait-role">Affiliated Member</div>
-      <div class="dk-portrait-bio">Isabella Benson is a senior at Boston College studying Applied Psychology and Human Development with minors in Marketing and Spanish. Her passion for DK English School comes from her motivation to celebrate language-learning and give children confidence to achieve academic and personal success.</div>
-    </div>
-    <div style="text-align:center;">
-      <div class="dk-portrait-photo">
-        <img src="/dk-english-photos/lauren.avif" alt="Lauren Brett">
-      </div>
-      <div class="dk-portrait-name">Lauren Brett</div>
-      <div class="dk-portrait-role">Affiliated Member</div>
-      <div class="dk-portrait-bio">Lauren Brett is a senior at Boston College studying Elementary Education and Applied Psychology and Human Development. She loves working with kids and has experience teaching elementary-age children at local schools in the Boston area. These experiences have provided her with the opportunity to work with English Language Learners and develop her skills in this area.</div>
     </div>
   </div>
 
