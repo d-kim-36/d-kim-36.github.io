@@ -1,10 +1,55 @@
 {{ define "main" }}
 {{ partial "dk-english/subnav.html" . }}
 
+<style>
+  .dk-pullquote {
+    border-left: 4px solid var(--dk-secondary);
+    margin: 28px 0;
+    padding: 16px 24px;
+    background: var(--dk-light);
+    border-radius: 0 var(--dk-radius) var(--dk-radius) 0;
+  }
+  .dk-pullquote p {
+    font-size: 18px;
+    font-style: italic;
+    color: var(--dk-text);
+    line-height: 1.7;
+    margin: 0;
+    opacity: 0.9;
+  }
+
+  .dk-vision-list {
+    list-style: none;
+    padding: 0;
+    margin: 24px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+  .dk-vision-list li {
+    padding: 16px 20px;
+    background: var(--dk-light);
+    border-radius: var(--dk-radius);
+    border: 1px solid var(--dk-border);
+    font-size: 15px;
+    color: var(--dk-muted);
+    line-height: 1.6;
+  }
+  .dk-vision-list li strong {
+    color: var(--dk-text);
+    display: block;
+    margin-bottom: 4px;
+    font-size: 15px;
+  }
+
+  .dark .dk-pullquote { background: var(--dk-light); }
+  .dark .dk-vision-list li { background: var(--dk-light); border-color: var(--dk-border); }
+</style>
+
 <!-- Hero -->
 <div class="dk-hero" id="dk-home">
   <h1>DK English School</h1>
-  <p>Empowering English learners through innovative, research-backed instruction.</p>
+  <p>Mastering English for the AI Era.</p>
   <a class="dk-cta-btn" href="https://school.eunha.studio" target="_blank" rel="noopener">
     LET'S GET STARTED &rarr;
   </a>
@@ -14,9 +59,30 @@
 <div id="dk-about">
   <div class="dk-section">
     <h2>Our Vision</h2>
-    <p>In today's society, Artificial Intelligence is fundamentally reshaping how we live and work. It is often viewed with apprehension, cited as the cause of workforce layoffs, a contributor to reduced attention spans in children who delegate their problem-solving to machines, and a source of potential misinformation due to algorithmic bias. Yet, the harsh truth is undeniable: AI is here to stay. Its ability to simplify complex problems and augment human effort means it will only become more deeply integrated into our daily lives.</p>
-    <p>Therefore, preparing students for the future means teaching them how to successfully assimilate with AI. In this new landscape, English is the ultimate tool for adaptation. Because the platforms driving this revolution (such as OpenAI and Gemini) are built on Large Language Models (LLMs), language is the mechanism we use to control them. To harness AI effectively, students must master two crucial skill sets: the ability to ask the right questions and the ability to articulate thoughts with absolute precision. As the saying goes, "You don't know what you don't know." If a student lacks the English proficiency to express their thoughts clearly to an LLM, they cannot prompt the system to yield accurate or satisfying results. Furthermore, deep English comprehension is the foundation of critical thinking. Students must be able to evaluate AI outputs to identify "hallucinations"—plausible but entirely fabricated responses—and counteract the biases inherent in digital platforms.</p>
-    <p>This is the core mission of the DK English School. We focus on these vital elements of inquiry and articulation. Our programs utilize research-verified curricula combined with an instructional "scaffolding" method. By breaking down complex language acquisition into manageable, highly interactive steps, we segregate the cognitive load. This reduces student stress, makes the learning process deeply engaging, and maximizes their ability to thrive as critical thinkers in an AI-driven world.</p>
+    <p>In today's society, Artificial Intelligence is fundamentally reshaping how we live and work. It is often viewed with apprehension, cited as a contributor to reduced attention spans in children who delegate their problem-solving to machines, and a source of potential misinformation. Yet, the harsh truth is undeniable: <strong>AI is here to stay.</strong></p>
+
+    <blockquote class="dk-pullquote">
+      <p>"In an AI-driven landscape, English is the ultimate tool for adaptation. To harness these platforms effectively, you must master the language that controls them."</p>
+    </blockquote>
+
+    <p>To succeed, students must master three crucial skill sets that go beyond traditional ESL:</p>
+
+    <ul class="dk-vision-list">
+      <li>
+        <strong>Asking the Right Questions</strong>
+        As the saying goes, "You don't know what you don't know." If a student lacks the English proficiency to prompt a Large Language Model (LLM) correctly, they cannot extract accurate results.
+      </li>
+      <li>
+        <strong>Articulating with Precision</strong>
+        Students must be able to express their thoughts with absolute clarity to direct AI tools efficiently and get satisfying, useful outputs.
+      </li>
+      <li>
+        <strong>Critical Defense</strong>
+        Deep language comprehension is the foundation of critical thinking, allowing students to identify AI "hallucinations" (fabricated responses) and counteract algorithmic bias.
+      </li>
+    </ul>
+
+    <p><strong>This is the core mission of the DK English School.</strong> We utilize research-verified curricula combined with an instructional "scaffolding" method. By breaking down complex language acquisition into manageable steps, we reduce student stress, make learning deeply interactive, and maximize their ability to thrive as critical thinkers.</p>
 
     <div class="content-grid" style="margin-top: 40px;">
       <a href="/dk-english/teams/" style="text-decoration: none;">
