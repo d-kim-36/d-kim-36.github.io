@@ -103,6 +103,20 @@
     text-align: left;
   }
 
+  /* ── STAFF GRID ── */
+  .dk-staff-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+  }
+  @media (max-width: 600px) {
+    .dk-staff-grid {
+      grid-template-columns: 1fr;
+      max-width: 340px;
+      margin: 0 auto;
+    }
+  }
+
   /* ── DARK MODE ── */
   .dark .dk-portrait-photo {
     background: rgb(46, 46, 51);
@@ -134,7 +148,7 @@
   </div>
 
   <!-- Drina & Katrina — 2-col row -->
-  <div style="display:grid; grid-template-columns: repeat(2, 1fr); gap: 32px;">
+  <div class="dk-staff-grid">
     <div style="text-align:center;">
       <div class="dk-portrait-photo">
         <img src="/dk-english-photos/drina.avif" alt="Drina Yatsu">
