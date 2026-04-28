@@ -15,16 +15,16 @@
     color: #fff !important;
   }
 
-  /* Override PaperMod's 720px main-width constraint for this page only */
+  /* Widen just enough for the hero banner; content wrap handles narrowing */
   .main {
-    max-width: min(1600px, 96vw);
+    max-width: min(960px, 96vw);
     padding: 0;
   }
 
   .dk-team-wrap {
-    max-width: 900px;
+    max-width: 780px;
     margin: 0 auto;
-    padding: 64px 40px;
+    padding: 56px 32px;
   }
 
   /* ── SECTION HEADING ── */
@@ -47,20 +47,20 @@
     border-radius: 2px;
   }
 
-  /* ── FEATURED PORTRAIT (founder/director) ── */
-  .dk-featured-wrap {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 48px;
+  /* ── TEAM GRID — 3 equal columns ── */
+  .dk-team-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+    align-items: start;
   }
-  .dk-featured-card {
-    max-width: 340px;
-    width: 100%;
-    text-align: center;
+  @media (max-width: 600px) {
+    .dk-team-grid {
+      grid-template-columns: 1fr;
+      max-width: 300px;
+      margin: 0 auto;
+    }
   }
-  .dk-featured-card .dk-portrait-name { font-size: 20px; }
-  .dk-featured-card .dk-portrait-role { font-size: 14px; margin-bottom: 12px; }
-  .dk-featured-card .dk-portrait-bio  { font-size: 14px; }
 
   /* ── PORTRAIT PHOTO BOX ── */
   .dk-portrait-photo {
@@ -103,19 +103,6 @@
     text-align: left;
   }
 
-  /* ── STAFF GRID ── */
-  .dk-staff-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 32px;
-  }
-  @media (max-width: 600px) {
-    .dk-staff-grid {
-      grid-template-columns: 1fr;
-      max-width: 340px;
-      margin: 0 auto;
-    }
-  }
 
   /* ── DARK MODE ── */
   .dark .dk-portrait-photo {
@@ -131,24 +118,21 @@
 
 <div class="dk-team-wrap">
 
-  <div class="dk-section-heading" style="margin-bottom: 44px;">Curriculum Development</div>
+  <div class="dk-section-heading" style="margin-bottom: 40px;">Curriculum Development</div>
 
-  <!-- Deoksoon Kim — featured -->
-  <div class="dk-featured-wrap">
-    <div class="dk-featured-card">
+  <div class="dk-team-grid">
+
+    <div style="text-align:center;">
       <div class="dk-portrait-photo">
         <img src="/dk-english-photos/deoksoon.avif" alt="Deoksoon Kim">
       </div>
       <div class="dk-portrait-name">Deoksoon Kim</div>
       <div class="dk-portrait-role">Founder &amp; Director</div>
       <div class="dk-portrait-bio">
-        Deoksoon Kim is an associate professor at Lynch School of Education at Boston College. Her research focuses on understanding the needs of immigrant students in order to help them learn English and succeed in school. She also investigates how to use instructional technology to facilitate language learning and teacher education. She has done research on gender and immigration, social and emotional development, and STEM teaching and learning.
+        Deoksoon Kim is an associate professor at Lynch School of Education at Boston College. Her research focuses on understanding the needs of immigrant students in order to help them learn English and succeed in school. She also investigates how to use instructional technology to facilitate language learning and teacher education.
       </div>
     </div>
-  </div>
 
-  <!-- Drina & Katrina — 2-col row -->
-  <div class="dk-staff-grid">
     <div style="text-align:center;">
       <div class="dk-portrait-photo">
         <img src="/dk-english-photos/drina.avif" alt="Drina Yatsu">
@@ -157,6 +141,7 @@
       <div class="dk-portrait-role">Associate Director &amp; Teacher</div>
       <div class="dk-portrait-bio">Drina Yatsu is a doctoral student specializing in language &amp; literacy at Boston College's Curriculum &amp; Instruction program. She has taught and tutored elementary students, professional adults, and is currently a teaching assistant for a graduate-level course. She loves developing creative activities and curriculum to engage all students in their learning.</div>
     </div>
+
     <div style="text-align:center;">
       <div class="dk-portrait-photo">
         <img src="/dk-english-photos/katrina.avif" alt="Katrina Borowiec">
@@ -165,6 +150,7 @@
       <div class="dk-portrait-role">Head of Research &amp; Teacher</div>
       <div class="dk-portrait-bio">Katrina Borowiec is a PhD Candidate in Measurement, Evaluation, Statistics, and Assessment (MESA) at Boston College. In addition to her experience as a teaching assistant and statistics tutor, she has six years of part-time professional experience working with adult learners. Her favorite part of teaching is watching students develop their academic confidence.</div>
     </div>
+
   </div>
 
 </div>
