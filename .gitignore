@@ -24,3 +24,7 @@ dist/
 public/
 resources/
 .hugo_build.lock
+
+.DS_Store
+__pycache__/
+*.pyc

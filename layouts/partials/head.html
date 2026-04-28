@@ -55,13 +55,14 @@
 {{- $media := (resources.Get "css/core/zmedia.css") }}
 {{- $license_css := (resources.Get "css/core/license.css") }}
 {{- $common := (resources.Match "css/common/*.css") | resources.Concat "assets/css/common.css" }}
+{{- $dk_english := (resources.Get "css/dk-english/subnav.css") }}
 
 {{- /* markup.highlight.noClasses should be set to `false` */}}
 {{- $chroma_styles := (resources.Get "css/includes/chroma-styles.css") }}
 {{- $chroma_mod := (resources.Get "css/includes/chroma-mod.css") }}
 
 {{- /* order is important */}}
-{{- $core := (slice $theme_vars $reset $common $chroma_styles $chroma_mod $includes_all $media) | resources.Concat "assets/css/core.css" | resources.Minify }}
+{{- $core := (slice $theme_vars $reset $common $dk_english $chroma_styles $chroma_mod $includes_all $media) | resources.Concat "assets/css/core.css" | resources.Minify }}
 {{- $extended := (resources.Match "css/extended/*.css") | resources.Concat "assets/css/extended.css" | resources.Minify }}
 
 {{- /* bundle all required css */}}
@@ -157,4 +158,3 @@
 {{ if or .Page.Params.math .Site.Params.math }}
 {{- partial "math.html" .}}
 {{ end }} 
-
