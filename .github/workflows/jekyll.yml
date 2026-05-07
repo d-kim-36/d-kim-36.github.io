@@ -48,7 +48,7 @@ jobs:
             --disable-external \
             --allow-hash-href
 
-      # Upload _site as a plain artifact so Playwright and Lighthouse jobs can
+      # Upload _site as a plain artifact so Playwright tests can
       # download it without needing to rebuild.
       - name: Upload _site artifact (for test jobs)
         uses: actions/upload-artifact@v4
