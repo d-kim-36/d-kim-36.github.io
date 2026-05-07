@@ -1,30 +1,10 @@
-# dependencies
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+vendor/
+Gemfile.lock
 node_modules/
-
-# logs
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-
-# macOS
-.DS_Store
-
-# environment files
-.env
-.env.local
-
-# editor
-.vscode/
-.idea/
-
-# optional: if you ever generate dist folder
-dist/
-
-# Hugo build artifacts
-public/
-resources/
-.hugo_build.lock
-
-.DS_Store
-__pycache__/
-*.pyc
+playwright-report/
+test-results/
+.claude/settings.local.json

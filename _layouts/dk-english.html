@@ -1,0 +1,40 @@
+---
+layout: single
+---
+
+{% if page.hero %}
+<div class="dk-hero">
+  <h1>{{ page.hero.heading }}</h1>
+  <p>{{ page.hero.subheading }}</p>
+  {% if page.hero.cta_url %}
+  <a href="{{ page.hero.cta_url }}" class="btn btn--primary" target="_blank" rel="noopener">
+    {{ page.hero.cta_label }}
+  </a>
+  {% endif %}
+</div>
+{% endif %}
+
+{{ content }}
+
+{% if page.grid_items %}
+<div class="content-grid" style="margin-top: 32px;">
+  {% for item in page.grid_items %}
+  <a href="{{ item.url }}" style="text-decoration: none;">
+    <div class="content-card">
+      <div class="card-body">
+        <span class="card-title">{{ item.title }}</span>
+        <p class="card-desc">{{ item.desc }}</p>
+      </div>
+    </div>
+  </a>
+  {% endfor %}
+</div>
+{% endif %}
+
+{% if page.contact %}
+<div class="dk-contact">
+  <h2>Contact</h2>
+  <p>Interested in enrolling or partnering with DK English School? Reach out to us directly.</p>
+  <p><strong>Email:</strong> <a href="mailto:{{ page.contact.email }}">{{ page.contact.email }}</a></p>
+</div>
+{% endif %}

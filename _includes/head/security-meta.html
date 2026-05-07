@@ -1,0 +1,5 @@
+<!-- Referrer policy is the only security directive that can be set reliably via meta tag.
+     X-Frame-Options, X-Content-Type-Options, Strict-Transport-Security, and
+     Content-Security-Policy require HTTP response headers — configure at CDN layer
+     (Cloudflare, Netlify, etc.) using the values documented in DESIGN.md §8. -->
+<meta name="referrer" content="strict-origin-when-cross-origin">

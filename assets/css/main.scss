@@ -1,0 +1,470 @@
+---
+# Required front matter for Jekyll to process this file.
+---
+
+@charset "utf-8";
+
+// ── 1. Variable Overrides ──────────────────────────────────────────────────────
+// Declared BEFORE the MM @import so that !default variables in the theme
+// defer to these values. Do not add !default here.
+
+// Color system — sourced from d-kim-36.github.io/assets/css/core/theme-vars.css
+$background-color:      #fafafa;       // warm off-white canvas (not clinical white)
+$text-color:            #1f2937;       // dark slate body text (never pure black)
+$primary-color:         #8a100b;       // BC Maroon — hierarchy & interaction only
+$link-color:            #8a100b;
+$link-color-hover:      #5c0807;       // manually darkened ~25% to avoid Sass color fn warnings
+$link-color-visited:    #8a100b;
+$muted-text-color:      #9b763c;       // warm gold — metadata, secondary labels
+$border-color:          #eeeeee;
+$footer-background-color: #f5f5f5;
+$active-color:              #6d0d09;       // pressed/active state — dark maroon, not washed-out pink
+$masthead-link-color:       $primary-color;
+$masthead-link-color-hover: #5c0807;
+
+// Typography — fonts loaded via _includes/head/custom.html
+$serif:              "Merriweather", "Georgia", serif;
+$sans-serif:         "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+$monospace:          "JetBrains Mono", "SFMono-Regular", Consolas, monospace;
+
+// Critical: MM defaults $header-font-family to $sans-serif. Override to serif.
+$global-font-family: $sans-serif;
+$header-font-family: $serif;
+$doc-font-size:      16px;
+
+// ── 2. Theme Imports ───────────────────────────────────────────────────────────
+@import "minimal-mistakes/skins/default";
+@import "minimal-mistakes";
+
+// ── 3. Typography Enforcement ──────────────────────────────────────────────────
+// Belt-and-suspenders: ensure all heading elements use serif even when
+// MM component classes override the font-family directly.
+
+body {
+  font-family: $sans-serif;
+  background-color: $background-color;
+  color: $text-color;
+  line-height: 1.65;
+}
+
+h1, h2, h3, h4, h5, h6,
+.page__title,
+.archive__item-title,
+.nav__title {
+  font-family: $serif;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+// Fluid heading scale
+h1, .page__title { font-size: clamp(1.75rem, 4vw, 2.5rem); }
+h2               { font-size: clamp(1.25rem, 3vw, 1.75rem); }
+h3               { font-size: clamp(1.05rem, 2vw, 1.35rem); }
+h4               { font-size: 1.1rem; }
+
+// ── 4. Link System ─────────────────────────────────────────────────────────────
+// Site-wide link color. Sidebar pill links are handled separately in section 6.
+a {
+  color: $link-color;
+  text-decoration: none;
+  transition: color 0.15s ease;
+
+  &:visited { color: $link-color-visited; }
+  &:hover   { color: $link-color-hover; text-decoration: underline; }
+}
+
+// ── 5. Masthead (Top Navigation) ──────────────────────────────────────────────
+.masthead {
+  background-color: $background-color;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: none;
+}
+
+.greedy-nav {
+  background: transparent;
+
+  a {
+    font-family: $sans-serif;
+    font-weight: 500;
+    font-size: 0.9rem;
+    color: $text-color;
+    border-bottom: none;
+    text-decoration: none;
+
+    &:hover { color: $primary-color; text-decoration: none; }
+  }
+
+  // Active nav indicator bar uses maroon
+  .visible-links a {
+    &::before { background: $primary-color; }
+  }
+
+  // Site title in the masthead — serif for brand authority
+  a.site-title {
+    font-family: $serif;
+    font-weight: 700;
+    color: $primary-color;
+    &:hover { color: $link-color-hover; text-decoration: none; }
+  }
+}
+
+// ── 6. Sidebar Polish (Linear Aesthetic) ──────────────────────────────────────
+
+// Remove default heavy border around the author wrapper
+.author__urls-wrapper {
+  button { display: none; } // hide the toggle on desktop via CSS alone (MM handles responsively)
+}
+
+.sidebar.sticky {
+  border: none;
+  background: transparent;
+}
+
+.author__avatar img {
+  border: none;
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.author__content {
+  border-top: none;
+  padding-top: 0.5em;
+}
+
+.author__name {
+  font-family: $serif;
+  color: $text-color;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.author__bio {
+  font-family: $sans-serif;
+  font-size: 0.82rem;
+  line-height: 1.55;
+  color: $muted-text-color;
+}
+
+// Social link pills — replace naked icon-links with rounded pill buttons
+.author__urls {
+  li { margin-bottom: 0.35em; }
+
+  a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4em;
+    padding: 0.3em 0.85em;
+    background: rgba(0, 0, 0, 0.04);
+    border-radius: 20px;
+    border: none !important;
+    color: $text-color !important;
+    font-family: $sans-serif;
+    font-size: 0.8rem;
+    font-weight: 500;
+    text-decoration: none !important;
+    transition: background 0.15s, color 0.15s;
+
+    &:hover {
+      background: rgba(138, 16, 11, 0.08);
+      color: $primary-color !important;
+      text-decoration: none !important;
+    }
+
+    i {
+      color: $muted-text-color;
+      font-size: 0.9em;
+    }
+
+    &:hover i { color: $primary-color; }
+  }
+}
+
+// ── 7. Card Component System (Tier 2 Pages) ───────────────────────────────────
+// Carried over 1:1 from d-kim-36.github.io/assets/css/common/custom-components.css
+
+.content-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+  margin-top: 20px;
+}
+
+.content-card {
+  background: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.content-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.card-body { padding: 16px 20px 20px; }
+
+.section-header {
+  color: $primary-color;
+  margin-top: 40px;
+  border-bottom: 2px solid $primary-color;
+  padding-bottom: 8px;
+  font-weight: 700;
+}
+
+.card-title {
+  color: $text-color;
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin: 0 0 6px;
+  display: block;
+  font-family: $sans-serif;
+}
+
+.card-desc {
+  color: $muted-text-color;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin: 0;
+  font-family: $sans-serif;
+}
+
+// 16:9 wrapper — works for both <img> and <iframe>
+.card-media {
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  position: relative;
+}
+.card-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.card-media iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+// Gallery: strip link decoration from card anchors
+.category-gallery a {
+  text-decoration: none !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+// DK English hub hero block
+.dk-hero {
+  padding: 48px 0 32px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  margin-bottom: 32px;
+
+  h1 {
+    font-family: $serif;
+    font-size: clamp(1.75rem, 4vw, 2.75rem);
+    color: $primary-color;
+    margin-bottom: 0.5rem;
+  }
+
+  p {
+    font-size: 1.15rem;
+    color: $muted-text-color;
+    margin-bottom: 1.5rem;
+  }
+}
+
+.dk-contact {
+  margin-top: 40px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+// ── 9. Homepage Split Layout ───────────────────────────────────────────────────
+
+.home-split {
+  min-height: calc(100vh - 80px);
+  display: flex;
+  align-items: center;
+  padding: 64px 0 80px;
+}
+
+.home-split__grid {
+  display: grid;
+  grid-template-columns: 60fr 40fr;
+  gap: 64px;
+  align-items: center;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.home-split__text {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.hero-greeting {
+  font-family: $serif;
+  font-size: clamp(2rem, 5vw, 3.25rem);
+  font-weight: 700;
+  color: $text-color;
+  line-height: 1.15;
+  margin: 0;
+}
+
+.hero-role {
+  font-family: $sans-serif;
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  font-weight: 600;
+  color: $primary-color;
+  letter-spacing: 0.01em;
+  margin: 0;
+  text-transform: none;
+}
+
+.hero-institution {
+  font-family: $sans-serif;
+  font-size: 1rem;
+  color: $muted-text-color;
+  margin: -12px 0 0;
+}
+
+.hero-intro {
+  font-family: $sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: #4b5563;
+  margin: 0;
+  max-width: 52ch;
+}
+
+.hero-pullquote {
+  font-family: $serif;
+  font-size: 1.15rem;
+  font-style: italic;
+  line-height: 1.6;
+  color: $text-color;
+  border-left: 3px solid $primary-color;
+  padding-left: 20px;
+  margin: 4px 0;
+}
+
+.hero-skills {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  li {
+    font-family: $sans-serif;
+    font-size: 0.93rem;
+    color: $text-color;
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+
+    &::before {
+      content: "→";
+      color: $primary-color;
+      font-size: 0.85rem;
+      flex-shrink: 0;
+    }
+  }
+}
+
+.hero-social {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 4px;
+
+  a {
+    font-family: $sans-serif;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: $primary-color;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 14px;
+    border: 1.5px solid rgba(138, 16, 11, 0.3);
+    border-radius: 6px;
+    transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+
+    &:hover {
+      background: $primary-color;
+      border-color: $primary-color;
+      color: #ffffff;
+    }
+  }
+}
+
+.home-split__portrait {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 16px;
+    box-shadow:
+      0 2px 4px rgba(0, 0, 0, 0.04),
+      0 8px 16px rgba(0, 0, 0, 0.08),
+      0 24px 48px rgba(0, 0, 0, 0.06);
+    display: block;
+  }
+}
+
+// Mobile: stack portrait below text
+@media (max-width: 768px) {
+  .home-split {
+    padding: 40px 0 56px;
+  }
+
+  .home-split__grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding: 0 20px;
+  }
+
+  .home-split__portrait {
+    order: -1;
+
+    img {
+      max-width: 240px;
+      border-radius: 50%;
+    }
+  }
+
+  .hero-intro {
+    max-width: unset;
+  }
+}
+
+// ── 8. Footer ──────────────────────────────────────────────────────────────────
+.page__footer {
+  background-color: $footer-background-color;
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+  color: #6b7280;
+
+  footer {
+    font-family: $sans-serif;
+    font-size: 0.82rem;
+  }
+
+  a {
+    color: $primary-color;
+    text-decoration: none;
+    &:hover { color: $link-color-hover; }
+  }
+}

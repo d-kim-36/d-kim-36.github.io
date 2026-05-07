@@ -1,0 +1,93 @@
+remote_theme: "mmistakes/minimal-mistakes"
+
+# Plugins required for remote theme
+plugins:
+  - jekyll-remote-theme
+  - jekyll-include-cache
+  - jekyll-feed
+  - jekyll-sitemap
+
+# ── Site Identity ──────────────────────────────────────────────────────────────
+title: "Deoksoon Kim"
+title_separator: "–"
+subtitle: "Professor, Boston College"
+description: "Research publications, academic experience, and professional biography of Deoksoon Kim, Ph.D., Professor at Boston College."
+url: "https://d-kim-36.github.io"
+locale: "en-US"
+
+# ── Theme Skin ─────────────────────────────────────────────────────────────────
+# Placeholder skin — will be replaced by custom SCSS overrides in Handoff #2.
+minimal_mistakes_skin: "default"
+
+# ── Author Profile (Left Sidebar) ─────────────────────────────────────────────
+author:
+  name: "Deoksoon Kim, Ph.D."
+  bio: >
+    Professor at the Lynch School of Education and Human Development, Boston College.
+    My research focuses on understanding the needs of immigrant students to facilitate
+    English acquisition and academic success through instructional technology.
+  location: "Boston College"
+  avatar: "/assets/images/avatar.jpg"
+  links:
+    # Confirmed URLs from existing site
+    - label: "Google Scholar"
+      icon: "ai ai-google-scholar"
+      url: "https://scholar.google.com/citations?hl=en&user=YvCec_sAAAAJ"
+    - label: "YouTube (TLab)"
+      icon: "fab fa-fw fa-youtube"
+      url: "https://www.youtube.com/@TLABTogether"
+    # Stub entries — add real URLs before launch
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope"
+      url: "#"  # TODO: replace with mailto:
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "#"  # TODO: replace with profile URL
+    - label: "ResearchGate"
+      icon: "fab fa-fw fa-researchgate"
+      url: "#"  # TODO: replace with profile URL
+    - label: "CV"
+      icon: "fas fa-fw fa-file-pdf"
+      url: "/assets/pdfs/cv.pdf"
+
+# ── Page Defaults ──────────────────────────────────────────────────────────────
+defaults:
+  # All pages: persistent author sidebar
+  - scope:
+      path: ""
+    values:
+      layout: "single"
+      author_profile: true
+      read_time: false
+      show_date: false
+      share: false
+      related: false
+
+# ── Build Settings ─────────────────────────────────────────────────────────────
+markdown: kramdown
+kramdown:
+  input: GFM
+  parse_block_html: true   # allows HTML blocks inside Markdown (maps, iframes, scripts)
+highlighter: rouge
+permalink: pretty
+timezone: America/New_York
+
+# Sass
+sass:
+  style: compressed
+
+# Exclude from build
+exclude:
+  - vendor/
+  - node_modules/
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - AGENTS.md
+  - CLAUDE.md
+  - DESIGN.md
+  - package.json
+  - package-lock.json
+  - playwright.config.js
+  - lighthouserc.json
+  - tests/

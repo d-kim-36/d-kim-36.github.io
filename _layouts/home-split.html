@@ -1,0 +1,58 @@
+---
+layout: default
+---
+
+<div id="main" class="home-split">
+  <div class="home-split__grid">
+
+    <div class="home-split__text">
+
+      {% if page.hero.greeting %}
+        <h1 class="hero-greeting">{{ page.hero.greeting }}</h1>
+      {% endif %}
+
+      {% if page.hero.role %}
+        <p class="hero-role">{{ page.hero.role }}</p>
+      {% endif %}
+
+      {% if page.hero.institution %}
+        <p class="hero-institution">{{ page.hero.institution }}</p>
+      {% endif %}
+
+      {% if page.hero.intro %}
+        <p class="hero-intro">{{ page.hero.intro }}</p>
+      {% endif %}
+
+      {% if page.hero.pullquote %}
+        <blockquote class="hero-pullquote">{{ page.hero.pullquote }}</blockquote>
+      {% endif %}
+
+      {% if page.hero.skills %}
+        <ul class="hero-skills">
+          {% for skill in page.hero.skills %}
+            <li>{{ skill }}</li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+
+      <div class="hero-social">
+        {% for link in site.author.links %}
+          {% unless link.url == "#" %}
+            <a href="{{ link.url }}" title="{{ link.label }}" target="_blank" rel="noopener noreferrer">
+              <i class="{{ link.icon }}" aria-hidden="true"></i>
+              {{ link.label }}
+            </a>
+          {% endunless %}
+        {% endfor %}
+      </div>
+
+    </div>
+
+    <div class="home-split__portrait">
+      {% if page.hero.portrait %}
+        <img src="{{ page.hero.portrait }}" alt="{{ site.author.name }}" loading="eager">
+      {% endif %}
+    </div>
+
+  </div>
+</div>

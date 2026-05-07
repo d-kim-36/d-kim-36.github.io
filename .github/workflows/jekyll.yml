@@ -1,0 +1,155 @@
+name: Deploy Jekyll to GitHub Pages
+
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+    branches: ["main"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Cancel in-progress PR runs; never cancel a main-branch deployment.
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: ${{ github.ref != 'refs/heads/main' }}
+
+jobs:
+  # ── 1. Build + HTMLProofer ────────────────────────────────────────────────────
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.3"
+          bundler-cache: true
+
+      - name: Setup Pages
+        id: pages
+        uses: actions/configure-pages@v5
+
+      - name: Build with Jekyll
+        run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
+        env:
+          JEKYLL_ENV: production
+
+      # Fails the build (and blocks deploy) if any internal link, PDF reference,
+      # image alt attribute, or script src is broken.
+      - name: HTMLProofer — internal link + asset validation
+        run: |
+          bundle exec htmlproofer _site \
+            --disable-external \
+            --allow-hash-href
+
+      # Upload _site as a plain artifact so Playwright and Lighthouse jobs can
+      # download it without needing to rebuild.
+      - name: Upload _site artifact (for test jobs)
+        uses: actions/upload-artifact@v4
+        with:
+          name: site
+          path: _site/
+          retention-days: 1
+
+      # Upload the GitHub Pages deployment artifact (separate format required
+      # by actions/deploy-pages).
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+
+  # ── 2. Playwright Smoke Tests ─────────────────────────────────────────────────
+  test-playwright:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Download _site artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: site
+          path: _site/
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+
+      - name: Install npm dependencies
+        run: npm ci
+
+      - name: Install Playwright browsers
+        run: npx playwright install chromium --with-deps
+
+      - name: Start HTTP server
+        run: python3 -m http.server 3000 --directory _site &
+
+      - name: Wait for server to be ready
+        run: |
+          for i in $(seq 1 15); do
+            curl -sf http://localhost:3000 > /dev/null && echo "Server ready" && break
+            echo "Waiting... ($i)"
+            sleep 1
+          done
+
+      - name: Run Playwright smoke tests
+        run: npx playwright test
+
+      - name: Upload Playwright report on failure
+        uses: actions/upload-artifact@v4
+        if: failure()
+        with:
+          name: playwright-report
+          path: playwright-report/
+          retention-days: 7
+
+  # ── 3. Lighthouse Performance Audit (informational — does not block deploy) ───
+  lighthouse:
+    needs: build
+    runs-on: ubuntu-latest
+    continue-on-error: true
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Download _site artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: site
+          path: _site/
+
+      - name: Start HTTP server
+        run: python3 -m http.server 3000 --directory _site &
+
+      - name: Wait for server
+        run: sleep 3
+
+      - name: Run Lighthouse CI
+        uses: treosh/lighthouse-ci-action@v12
+        with:
+          urls: |
+            http://localhost:3000/
+            http://localhost:3000/dk-english/
+          configPath: ./lighthouserc.json
+          uploadArtifacts: true
+          temporaryPublicStorage: true
+
+  # ── 4. Deploy (push to main only; requires build + playwright to pass) ────────
+  deploy:
+    needs: [build, test-playwright]
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
