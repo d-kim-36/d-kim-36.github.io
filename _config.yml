@@ -31,7 +31,7 @@ author:
   links:
     # Confirmed URLs from existing site
     - label: "Google Scholar"
-      icon: "ai ai-google-scholar"
+      icon: "fab fa-fw fa-google"
       url: "https://scholar.google.com/citations?hl=en&user=YvCec_sAAAAJ"
     - label: "YouTube (TLab)"
       icon: "fab fa-fw fa-youtube"

@@ -8,11 +8,7 @@ toc_label: "Research Areas"
 toc_sticky: true
 ---
 
-# Research Overview
-
 My research sits at the intersection of language acquisition, instructional technology, and educational equity. I investigate how digital tools — from social media to generative AI — can be designed and deployed to support immigrant and emergent bilingual students in K-12 STEM and language arts contexts.
-
----
 
 ## AI & Multimodal Digital Literacy
 

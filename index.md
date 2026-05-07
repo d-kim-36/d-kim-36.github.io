@@ -18,5 +18,5 @@ hero:
     - "Digital Storytelling & Multimodal Literacies"
     - "Formative Assessment & Instructional Technology"
     - "Teacher Education & Professional Development"
-  portrait: "/assets/images/picture.jpeg"
+  portrait: "/assets/images/head.jpeg"
 ---

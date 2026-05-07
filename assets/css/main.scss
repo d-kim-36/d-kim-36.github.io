@@ -56,11 +56,17 @@ h1, h2, h3, h4, h5, h6,
   line-height: 1.2;
 }
 
-// Fluid heading scale
-h1, .page__title { font-size: clamp(1.75rem, 4vw, 2.5rem); }
-h2               { font-size: clamp(1.25rem, 3vw, 1.75rem); }
-h3               { font-size: clamp(1.05rem, 2vw, 1.35rem); }
-h4               { font-size: 1.1rem; }
+// Fluid heading scale — restrained for editorial readability
+h1, .page__title { font-size: clamp(1.5rem, 2.5vw, 1.875rem); }
+h2               { font-size: clamp(1.15rem, 1.8vw, 1.375rem); }
+h3               { font-size: clamp(1.05rem, 1.4vw, 1.15rem); }
+h4               { font-size: 1rem; font-weight: 700; }
+
+// MM's page__title can have margin baggage — tighten it
+.page__title {
+  margin-bottom: 0.5rem;
+  margin-top: 0;
+}
 
 // ── 4. Link System ─────────────────────────────────────────────────────────────
 // Site-wide link color. Sidebar pill links are handled separately in section 6.
@@ -147,32 +153,36 @@ a {
 
 // Social link pills — replace naked icon-links with rounded pill buttons
 .author__urls {
-  li { margin-bottom: 0.35em; }
+  margin-top: 0.75em;
+  li { margin-bottom: 0.55em; }
 
   a {
     display: inline-flex;
     align-items: center;
-    gap: 0.4em;
-    padding: 0.3em 0.85em;
+    gap: 0.55em;
+    padding: 0.45em 1em;
     background: rgba(0, 0, 0, 0.04);
     border-radius: 20px;
     border: none !important;
     color: $text-color !important;
     font-family: $sans-serif;
-    font-size: 0.8rem;
+    font-size: 0.82rem;
     font-weight: 500;
     text-decoration: none !important;
-    transition: background 0.15s, color 0.15s;
+    transition: background 0.15s, color 0.15s, transform 0.15s;
 
     &:hover {
       background: rgba(138, 16, 11, 0.08);
       color: $primary-color !important;
       text-decoration: none !important;
+      transform: translateX(2px);
     }
 
     i {
       color: $muted-text-color;
-      font-size: 0.9em;
+      font-size: 0.95em;
+      width: 1em;
+      text-align: center;
     }
 
     &:hover i { color: $primary-color; }
@@ -264,17 +274,20 @@ a {
 
   h1 {
     font-family: $serif;
-    font-size: clamp(1.75rem, 4vw, 2.75rem);
+    font-size: clamp(1.5rem, 3vw, 2rem);
     color: $primary-color;
     margin-bottom: 0.5rem;
   }
 
   p {
-    font-size: 1.15rem;
+    font-size: 1rem;
     color: $muted-text-color;
     margin-bottom: 1.5rem;
   }
 }
+
+// dk-english hub renders title via .dk-hero — suppress duplicate page__title
+body.layout--dk-english .page__title { display: none; }
 
 .dk-contact {
   margin-top: 40px;
@@ -310,7 +323,7 @@ a {
 
 .hero-greeting {
   font-family: $serif;
-  font-size: clamp(2rem, 5vw, 3.25rem);
+  font-size: clamp(1.75rem, 4vw, 2.625rem);
   font-weight: 700;
   color: $text-color;
   line-height: 1.15;

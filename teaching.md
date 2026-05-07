@@ -8,10 +8,6 @@ toc_label: "Institutions"
 toc_sticky: true
 ---
 
-# Teaching and Course Development
-
----
-
 ## Boston College
 
 **Fall 2016 – Present** \| Lynch School of Education and Human Development
