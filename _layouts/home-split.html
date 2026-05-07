@@ -56,3 +56,24 @@ layout: default
 
   </div>
 </div>
+
+{% if page.highlights %}
+<section class="home-highlights" aria-label="{{ page.highlights.title }}">
+  <div class="home-highlights__inner">
+    <h2 class="section-header">{{ page.highlights.title }}</h2>
+    {% if page.highlights.intro %}<p class="home-highlights__intro">{{ page.highlights.intro }}</p>{% endif %}
+    <div class="content-grid">
+      {% for card in page.highlights.cards %}
+      <a href="{{ card.url }}" class="home-highlights__card">
+        <div class="content-card">
+          <div class="card-body">
+            <span class="card-title">{{ card.title }}</span>
+            <p class="card-desc">{{ card.desc }}</p>
+          </div>
+        </div>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}

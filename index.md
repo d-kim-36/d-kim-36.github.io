@@ -19,4 +19,18 @@ hero:
     - "Formative Assessment & Instructional Technology"
     - "Teacher Education & Professional Development"
   portrait: "/assets/images/head.jpeg"
+
+highlights:
+  title: "Research & Impact Highlights"
+  intro: "Three threads where my research, teaching, and partnerships intersect — each linked to deeper context."
+  cards:
+    - title: "Latest Research"
+      desc: "Selected publications across digital storytelling, AI in education, and bilingual learning."
+      url: /publications/
+    - title: "DK English School"
+      desc: "An English school designed for the AI era — voice, identity, and critical thinking through language."
+      url: /dk-english/
+    - title: "TLab — Multimodal Storytelling"
+      desc: "Teacher reflections, classroom artifacts, and projects from the lab."
+      url: /media/
 ---
