@@ -56,15 +56,49 @@ h1, h2, h3, h4, h5, h6,
   line-height: 1.2;
 }
 
-// Fluid heading scale — restrained for editorial readability
-h1, .page__title { font-size: clamp(1.5rem, 2.5vw, 1.875rem); }
-h2               { font-size: clamp(1.15rem, 1.8vw, 1.375rem); }
-h3               { font-size: clamp(1.05rem, 1.4vw, 1.15rem); }
-h4               { font-size: 1rem; font-weight: 700; }
+// Heading hierarchy — each level distinct via size + weight + letter-spacing.
+// Aiming for: h1 authoritative · h2 clear divider · h3 quiet sub-section.
+h1, .page__title {
+  font-size:      clamp(1.625rem, 2.4vw, 2rem);     // ~26 → 40px
+  font-weight:    700;
+  letter-spacing: -0.02em;
+}
+h2 {
+  font-size:      clamp(1.2rem, 1.7vw, 1.4rem);     // ~19 → 28px
+  font-weight:    700;
+  letter-spacing: -0.015em;
+}
+h3 {
+  font-size:      clamp(1.05rem, 1.3vw, 1.175rem);  // ~17 → 23.5px
+  font-weight:    600;                              // lighter than h1/h2 — the "quiet" level
+  letter-spacing: -0.005em;
+}
+h4 {
+  font-size:      1rem;
+  font-weight:    700;
+  letter-spacing: -0.005em;
+}
 
 // MM's page__title can have margin baggage — tighten it
 .page__title {
   margin-bottom: 0.5rem;
+  margin-top: 0;
+}
+
+// Vertical rhythm: when a sub-heading follows its parent immediately, group
+// them tightly so the pair reads as one editorial unit, not two detached blocks.
+h1 + h2,
+h2 + h3,
+h3 + h4 {
+  margin-top: 0.5rem;
+}
+
+// MM renders .page__title in a separate <header>, so it's not an adjacent
+// sibling of the first content heading. Tighten the gap by zeroing the
+// top margin of the first heading inside .page__content.
+.page__content > h1:first-child,
+.page__content > h2:first-child,
+.page__content > h3:first-child {
   margin-top: 0;
 }
 
@@ -105,12 +139,19 @@ a {
     &::before { background: $primary-color; }
   }
 
-  // Site title in the masthead — serif for brand authority
+  // Site title in the masthead — serif for brand authority.
+  // The HTML element stays in the DOM (preserves SEO / structured data);
+  // it's only hidden visually where the persistent sidebar already
+  // carries identity (≥1024px / MM's $large breakpoint).
   a.site-title {
     font-family: $serif;
     font-weight: 700;
     color: $primary-color;
     &:hover { color: $link-color-hover; text-decoration: none; }
+  }
+
+  @media (min-width: 1024px) {
+    a.site-title { display: none; }
   }
 }
 
@@ -151,31 +192,48 @@ a {
   color: $muted-text-color;
 }
 
-// Social link pills — replace naked icon-links with rounded pill buttons
+// Sidebar identity rows — Notion-style: full-pill anchors over a whisper
+// surface, hover darkens the background only (no chromatic shift).
 .author__urls {
   margin-top: 0.75em;
-  li { margin-bottom: 0.55em; }
+  li { margin-bottom: 0.45em; }
 
+  // Location is a non-clickable label — render as a quiet caption with its
+  // map-pin icon, visually separated from the interactive pill stack below.
+  li[itemprop="homeLocation"] {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.55em;
+    padding: 0.15em 0.25em;
+    margin-bottom: 0.7em;
+    color: $muted-text-color;
+    font-family: $sans-serif;
+    font-size: 0.82rem;
+    font-weight: 500;
+
+    i { color: $muted-text-color; font-size: 0.95em; width: 1em; text-align: center; }
+  }
+
+  // Clickable social pills
   a {
     display: inline-flex;
     align-items: center;
     gap: 0.55em;
     padding: 0.45em 1em;
-    background: rgba(0, 0, 0, 0.04);
-    border-radius: 20px;
+    background: rgba(0, 0, 0, 0.04);   // whisper surface
+    border-radius: 9999px;             // full pill
     border: none !important;
-    color: $text-color !important;
+    color: $muted-text-color !important; // muted by default — not the body text color
     font-family: $sans-serif;
     font-size: 0.82rem;
     font-weight: 500;
     text-decoration: none !important;
-    transition: background 0.15s, color 0.15s, transform 0.15s;
+    transition: background 0.18s ease, color 0.18s ease;
 
     &:hover {
-      background: rgba(138, 16, 11, 0.08);
-      color: $primary-color !important;
+      background: rgba(0, 0, 0, 0.07); // subtle darkening — no chromatic shift
+      color: $text-color !important;
       text-decoration: none !important;
-      transform: translateX(2px);
     }
 
     i {
@@ -183,9 +241,10 @@ a {
       font-size: 0.95em;
       width: 1em;
       text-align: center;
+      transition: color 0.18s ease;
     }
 
-    &:hover i { color: $primary-color; }
+    &:hover i { color: $text-color; }
   }
 }
 
