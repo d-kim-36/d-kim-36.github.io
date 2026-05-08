@@ -10,23 +10,23 @@ toc_sticky: true
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/css/lightgallery-bundle.min.css" />
 
-### Category 1
+### Classroom Research
 {: .section-header}
 
 {::nomarkdown}
 <div class="category-gallery content-grid">
-  {% include gallery-card.html image="/assets/images/gallery/1.jpg" title="To-be-filled" desc="To-be-filled" sub="Emergent bilinguals in STEM." %}
-  {% include gallery-card.html image="/assets/images/gallery/3.jpg" title="To-be-filled" desc="To-be-filled" sub="Digital wikis in ESL." %}
+  {% include gallery-card.html image="/assets/images/gallery/1.jpg" title="Emergent Bilinguals in STEM" desc="Research moments from multilingual middle-school science classrooms." sub="Emergent bilinguals in STEM." %}
+  {% include gallery-card.html image="/assets/images/gallery/3.jpg" title="Digital Wikis in ESL" desc="Collaborative writing studies with second-language learners." sub="Digital wikis in ESL." %}
 </div>
 {:/nomarkdown}
 
-### Category 2
+### Identity & Public Scholarship
 {: .section-header}
 
 {::nomarkdown}
 <div class="category-gallery content-grid">
-  {% include gallery-card.html image="/assets/images/gallery/2.jpg" title="To-be-filled" desc="To-be-filled" sub="Identity construction." %}
-  {% include gallery-card.html image="/assets/images/gallery/4.jpg" title="To-be-filled" desc="To-be-filled" sub="Sharing research insights." %}
+  {% include gallery-card.html image="/assets/images/gallery/2.jpg" title="Identity Construction" desc="Bilingual identity and voice in digital storytelling work." sub="Identity construction." %}
+  {% include gallery-card.html image="/assets/images/gallery/4.jpg" title="Research Communication" desc="Sharing findings with educators, students, and the wider community." sub="Sharing research insights." %}
 </div>
 {:/nomarkdown}
 

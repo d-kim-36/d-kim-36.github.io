@@ -29,7 +29,7 @@ author:
     Professor at the Lynch School of Education and Human Development, Boston College.
     My research focuses on understanding the needs of immigrant students to facilitate
     English acquisition and academic success through instructional technology.
-  location: "Boston College"
+  location: "Lynch School of Education, Boston College"
   avatar: "/assets/images/avatar.jpg"
   links:
     # Confirmed URLs from existing site
@@ -39,16 +39,12 @@ author:
     - label: "YouTube (TLab)"
       icon: "fab fa-fw fa-youtube"
       url: "https://www.youtube.com/@TLABTogether"
-    # Stub entries — add real URLs before launch
-    - label: "Email"
-      icon: "fas fa-fw fa-envelope"
-      url: "#"  # TODO: replace with mailto:
     - label: "LinkedIn"
       icon: "fab fa-fw fa-linkedin"
-      url: "#"  # TODO: replace with profile URL
+      url: "https://www.linkedin.com/in/deoksoon-kim-5a58ba39"
     - label: "ResearchGate"
       icon: "fab fa-fw fa-researchgate"
-      url: "#"  # TODO: replace with profile URL
+      url: "https://www.researchgate.net/profile/Deoksoon-Kim"
 
 # ── Page Defaults ──────────────────────────────────────────────────────────────
 defaults:
