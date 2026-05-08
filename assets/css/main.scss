@@ -200,9 +200,11 @@ a {
 
   // Location is a non-clickable label — render as a quiet caption with its
   // map-pin icon, visually separated from the interactive pill stack below.
+  // Use flex with align-items:flex-start so multi-line text wraps cleanly
+  // and the icon stays anchored to the first line.
   li[itemprop="homeLocation"] {
-    display: inline-flex;
-    align-items: center;
+    display: flex;
+    align-items: flex-start;
     gap: 0.55em;
     padding: 0.15em 0.25em;
     margin-bottom: 0.7em;
@@ -210,8 +212,18 @@ a {
     font-family: $sans-serif;
     font-size: 0.82rem;
     font-weight: 500;
+    line-height: 1.45;
 
-    i { color: $muted-text-color; font-size: 0.95em; width: 1em; text-align: center; }
+    i {
+      color: $muted-text-color;
+      font-size: 0.95em;
+      width: 1em;
+      text-align: center;
+      flex-shrink: 0;       // never shrink the icon column
+      margin-top: 0.15em;   // tiny vertical nudge so icon aligns with text x-height
+    }
+
+    .p-locality { min-width: 0; }   // allow long names to wrap to next line
   }
 
   // Clickable social pills
