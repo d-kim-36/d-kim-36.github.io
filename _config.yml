@@ -4,7 +4,6 @@ remote_theme: "mmistakes/minimal-mistakes"
 plugins:
   - jekyll-remote-theme
   - jekyll-include-cache
-  - jekyll-feed
   - jekyll-sitemap
 
 # ── Site Identity ──────────────────────────────────────────────────────────────
@@ -18,6 +17,10 @@ locale: "en-US"
 # ── Theme Skin ─────────────────────────────────────────────────────────────────
 # Placeholder skin — will be replaced by custom SCSS overrides in Handoff #2.
 minimal_mistakes_skin: "default"
+
+# Hide MM's auto-rendered feed link in masthead/head; we don't publish a feed.
+atom_feed:
+  hide: true
 
 # ── Author Profile (Left Sidebar) ─────────────────────────────────────────────
 author:
@@ -46,9 +49,6 @@ author:
     - label: "ResearchGate"
       icon: "fab fa-fw fa-researchgate"
       url: "#"  # TODO: replace with profile URL
-    - label: "CV"
-      icon: "fas fa-fw fa-file-pdf"
-      url: "/assets/pdfs/cv.pdf"
 
 # ── Page Defaults ──────────────────────────────────────────────────────────────
 defaults:

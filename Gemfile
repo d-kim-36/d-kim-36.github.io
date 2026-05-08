@@ -9,6 +9,5 @@ gem "html-proofer", "~> 5.0"
 group :jekyll_plugins do
   gem "jekyll-remote-theme"
   gem "jekyll-include-cache"
-  gem "jekyll-feed"
   gem "jekyll-sitemap"
 end

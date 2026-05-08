@@ -22,7 +22,7 @@ hero:
 
 highlights:
   title: "Research & Impact Highlights"
-  intro: "Three threads where my research, teaching, and partnerships intersect — each linked to deeper context."
+  intro: "Three intersecting domains of my scholarship — research, teaching, and educational practice — each linked to deeper context."
   cards:
     - title: "Latest Research"
       desc: "Selected publications across digital storytelling, AI in education, and bilingual learning."
